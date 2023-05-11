@@ -1,23 +1,14 @@
 <template>
-  <div>
-    <p class="nunito2">loremipsum</p>
-    <p class="nunito">loremipsum</p>
-  </div>
+    <div class="my-12 mx-6 flex items-center justify-center text-4xl">
+      <Greet :greet="'Our Lovely Idols'" />
+    </div>
 </template>
 
-<script>
-
+<script setup>
 </script>
 
 <style scoped>
-.nunito {
-  font-family: 'Nunito',serif;
-  font-weight: 300;
-}
 
-.nunito2 {
-  font-family: 'Nunito',serif;
-  font-weight: 500;
-}
+
 
 </style>

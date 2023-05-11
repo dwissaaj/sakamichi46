@@ -3,8 +3,9 @@
 // @ts-ignore
 export default defineNuxtConfig({
     modules: [
-        "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon"
+        "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon","@nuxtjs/strapi"
     ],
+
     app: {
         head: {
             title: 'Sakamichi',
@@ -16,23 +17,25 @@ export default defineNuxtConfig({
             ]
         }
     },
+    strapi: {
+        url: process.env.STRAPI_URL || 'http://127.0.0.1:1337',
+        prefix: '/api',
+        version: 'v4',
+    },
     image : {
         dir: 'assets/images',
-        screens: {
-            xs: 320,
-            sm: 640,
-            md: 768,
-            lg: 1024,
-            xl: 1280,
-            xxl: 1536,
-            '2xl': 1536
+        strapi: {
+            baseURL: 'http://localhost:1337/'
         }
     },
+
     googleFonts: {
         families: {
            'Poppins' : true,
-           'Nunito' : [300,500]
-
+           'Nunito' : [300,500],
+           'Ubuntu' : [300,500],
+            'Bree Serif' : true
         }
-    }
+    },
+
 })
