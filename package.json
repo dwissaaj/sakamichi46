@@ -9,11 +9,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.0.4",
     "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/strapi": "^1.9.1",
     "@nuxtjs/tailwindcss": "^6.6.8",
     "@types/node": "^18",
+    "element-plus": "^2.3.4",
     "nuxt": "^3.4.3",
     "nuxt-icon": "^0.4.0"
   },

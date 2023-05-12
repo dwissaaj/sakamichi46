@@ -1,11 +1,11 @@
 <template>
-
+  <h1>template for id</h1>
 </template>
 
-<script>
-export default {
-  name: "[id]"
-}
+<script setup>
+const id = useRoute().params
+
+
 </script>
 
 <style scoped>
