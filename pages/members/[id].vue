@@ -1,11 +1,10 @@
 <template>
-  <h1>template for id</h1>
+{{id}}
 </template>
 
 <script setup>
-const id = useRoute().params
 
-
+const { id } = useRoute().params
 </script>
 
 <style scoped>

@@ -1,13 +1,13 @@
 <template>
-  <div class="greet flex gap-2 items-center">
-    <Icon name="material-symbols:book-outline" />
-    <h1>{{greet}}</h1>
+  <div class="greet flex gap-2 items-center text-2xl">
+    <p>{{greets}}</p>
+    <nuxt-link class="" :to="`${link}`">{{target}}</nuxt-link>
   </div>
 </template>
 
 <script setup>
 
-const { greet } = defineProps(['greet'])
+const {greet} = defineProps(['greets','target','link'])
 </script>
 
 <style scoped>
