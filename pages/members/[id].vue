@@ -1,12 +1,10 @@
 <template>
-
+{{id}}
 </template>
 
-<script>
-export default {
-  name: "MemberCard"
-}
+<script setup>
 
+const { id } = useRoute().params
 </script>
 
 <style scoped>

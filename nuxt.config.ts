@@ -4,6 +4,7 @@
 export default defineNuxtConfig({
     modules: [
         "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon","@nuxtjs/strapi"
+        ,'@element-plus/nuxt'
     ],
 
     app: {
@@ -28,13 +29,19 @@ export default defineNuxtConfig({
             baseURL: 'http://localhost:1337/'
         }
     },
-
+    tailwindcss: {
+        cssPath: '~/assets/css/tailwind.css',
+    },
     googleFonts: {
         families: {
            'Poppins' : true,
            'Nunito' : [300,500],
            'Ubuntu' : [300,500],
-            'Bree Serif' : true
+            'Bree Serif' : true,
+            'Raleway' : [300,500],
+            'Monospace': [400,700],
+             'Inconsolata': [400,700],
+            'Lato' : [400.700]
         }
     },
 

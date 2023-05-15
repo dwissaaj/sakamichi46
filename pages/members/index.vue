@@ -1,20 +1,46 @@
 <template>
-  <h1>Nogizaka</h1>
-  <div v-for="member in response">
-    <p>{{member.attributes.names}}</p>
-    <div v-for="image in member.attributes.image">
-      <nuxt-img provider="strapi" :src="`${image.attributes.formats.large.url}`" />
+  <div class="flex flex-col gap-8">
+<!--    Nogi filter-->
+    <div>
+      <Greet :target="'Nogizaka46'" :link="'/'" />
+      <div class="grid grid-cols-6 gap-4 globalFont">
+        <div  v-for="member in responseNogizaka" :key="member.id">
+          <CardNogi :nogi="member" />
+        </div>
+      </div>
+    </div>
+<!--    Saku Filter    -->
+
+
+    <div>
+      <Greet :target="'Sakurazaka46'" :link="'/'" />
+      <div class="grid grid-cols-6 gap-4 globalFont">
+        <div  v-for="member in responseSakurazaka" :key="member.id">
+          <CardNogi :nogi="member" />
+        </div>
+      </div>
+    </div>
+    <div>
+      <Greet :target="'Hinatazaka46'" :link="'/'" />
+      <div class="grid grid-cols-6 gap-4 globalFont">
+        <div  v-for="member in responseHinatazaka" :key="member.id">
+          <CardNogi :nogi="member" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-const { test } = defineProps(['test'])
 const {find} = useStrapi()
-const {data: response} = await find('members?populate=*')
-console.log(response)
+const {data: responseNogizaka} = await find('members?populate=*&filters[group][$eq]=Nogizaka46')
+const {data: responseSakurazaka} = await find('members?populate=*&filters[group][$eq]=Sakurazaka46')
+const {data: responseHinatazaka} = await find('members?populate=*&filters[group][$eq]=Hinatazaka46')
 </script>
 
 <style scoped>
-
+.globalFont {
+  font-family: 'Roboto',sans-serif;
+}
 </style>
+
