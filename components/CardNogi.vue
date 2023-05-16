@@ -1,12 +1,12 @@
 <template>
-  <div v-if="`${nogi.attributes.group}` === 'Nogizaka46'" class="globalFont flex flex-col capitalize  justify-items-center rounded-xl border p-3 shadow-[7px_5px_0px_0px_rgba(219,0,219,1)] hover:shadow-[9px_7px_0px_0px_rgba(219,0,219,1)] hover:bg-slate-200">
-    <div v-for="data in nogi.attributes.image">
+  <div v-if="`${nogi.attributes.group}` === 'Nogizaka46'" class="globalFont max-w-[150px] max-h-fit flex flex-col capitalize rounded-xl border p-3 shadow-[7px_5px_0px_0px_rgba(219,0,219,1)] hover:shadow-[9px_7px_0px_0px_rgba(219,0,219,1)] hover:bg-slate-200">
+    <div class="rounded-md max-w-[150px] " v-for="data in nogi.attributes.image">
       <nuxt-img class="rounded-md" provider="strapi" :src="`${data.attributes.url}`" />
     </div>
-    <p>{{nogi.attributes.names}} ({{nogi.attributes.age}})</p>
-    <p>{{nogi.attributes.nameKanji}}</p>
-    <p>{{nogi.attributes.birthplace}}</p>
-    <div class="ring-2 hover:text-purple-500 mt-2 ring-purple-400 flex justify-center items-center gap-2 rounded-md">
+    <p class="text-sm">{{nogi.attributes.names}} ({{nogi.attributes.age}})</p>
+    <p class="text-sm">{{nogi.attributes.nameKanji}}</p>
+    <p class="text-sm">{{nogi.attributes.birthplace}}</p>
+    <div class="text-sm ring-2 hover:text-purple-500 mt-2 ring-purple-400 flex justify-center items-center gap-2 rounded-md">
       <NuxtLink class="" :to="`members/${nogi.id}`">Details</NuxtLink>
       <Icon name="material-symbols:send-outline-rounded" />
     </div>

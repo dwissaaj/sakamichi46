@@ -1,5 +1,7 @@
 <template>
-{{id}}
+  <div class="w-full max-w-[1440px] mx-auto">
+
+  </div>
 </template>
 
 <script setup>

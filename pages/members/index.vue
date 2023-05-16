@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-8 w-full max-w-[1440px] mx-auto px-4 lg:p-16">
 <!--    Nogi filter-->
     <div>
       <Greet :target="'Nogizaka46'" :link="'/'" />
-      <div class="grid grid-cols-6 gap-4 globalFont">
+      <div class="grid grid-cols-6 globalFont">
         <div  v-for="member in responseNogizaka" :key="member.id">
           <CardNogi :nogi="member" />
         </div>

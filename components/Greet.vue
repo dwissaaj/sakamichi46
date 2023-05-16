@@ -8,6 +8,8 @@
 <script setup>
 
 const {greet} = defineProps(['greets','target','link'])
+
+const {data : member} = ''
 </script>
 
 <style scoped>
