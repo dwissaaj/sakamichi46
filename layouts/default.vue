@@ -29,9 +29,15 @@
         <NuxtLink class="text-white Ubuntu">Join Us</NuxtLink>
     </div>
   </nav>
-  <div class="m-4">
-      <slot />
+  <div>
+    <slot />
   </div>
+
+<!--    <footer class="bg-black">-->
+<!--        <div class="bg-black">-->
+<!--dsfdfsdfs-->
+<!--        </div>-->
+<!--    </footer>-->
 </template>
 
 <script>
