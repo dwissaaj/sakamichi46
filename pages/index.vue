@@ -5,6 +5,11 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Sakamichi Fansite Homepage ',
+  ogTitle: 'Fanpage where Talk about Sakamichi',
+  description: 'This is a fan site where talk all about sakamichi members single and infomartion',
+})
 </script>
 
 <style scoped>
