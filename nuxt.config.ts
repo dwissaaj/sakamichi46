@@ -6,18 +6,6 @@ export default defineNuxtConfig({
         "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon","@nuxtjs/strapi"
         ,'@element-plus/nuxt','nuxt-swiper'
     ],
-
-    app: {
-        head: {
-            title: 'Sakamichi',
-            meta: [
-                {name: ' description', content: 'Sakamichi Fan Site'}
-            ],
-            link: [
-                { rel: 'icon', type: 'images/x-icon', href: '/favicon.ico' }
-            ]
-        }
-    },
     strapi: {
         url: process.env.STRAPI_URL || 'http://127.0.0.1:1337',
         prefix: '/api',
@@ -42,7 +30,7 @@ export default defineNuxtConfig({
             'Monospace': [400,700],
              'Inconsolata': [400,700],
             'Lato' : [400.700],
-            'Inter' : [100,300,500]
+            'Inter' : [100,300]
         }
     },
 

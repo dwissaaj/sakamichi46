@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-[1440px] mx-auto" v-for="member in response" key="member.id">
+  <div class="w-full max-w-[1440px] mx-auto interFont" v-for="member in response" key="member.id">
     <Head>
       <Title>{{member.attributes.group}} {{member.attributes.name}}</Title>
       <Meta name="description" :content="member.attributes.description" />
@@ -20,9 +20,7 @@
               <div class="mt-6 lg:mt-12 grid grid-cols-1 grid-cols-2 gap-5 globalFont text-base font-normal">
                 <CareerCard :memberCareer="member"/>
               </div>
-              <div class="ring-red-500">
-                  <p>bug at</p>
-              </div>
+
             </div>
             <div class="flex flex-col mt-4 lg:mt-8">
               <div  class="flex flex-row space-x-6" >
@@ -44,16 +42,20 @@
               <GlobalTitle title="Single"/>
               <SingleCard :dataSingle="member" />
             </div>
-            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8 space-y-2 mb-24">
+            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8">
               <GlobalTitle title="Gallery"/>
-              <div class="border-4  grid grid-cols-1 md:grid-cols-4 lg:gap-3">
-                <div class="" v-for="data in gallery">
-                  <div v-for="data2 in data.attributes.collection">
-                    <div v-for="data3 in data2.image.data">
-                      <nuxt-img class="hover:scale-[2.0]" provider="strapi" :src="`${data3.attributes.url}`" />
-                    </div>
-                  </div>
+              <Gallery :dataGallery="gallery" />
+            </div>
+            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8 ">
+              <div class="flex flex-row justify-between items-center">
+                <GlobalTitle title="Other Member"/>
+                <NuxtLink class="underline" to="/members"><GlobalTitle title="View All"/></NuxtLink>
+              </div>
+              <div class="border rounded-md border-slate-500 bg-gray-200 p-3 grid grid-cols-3 justify-items-center gap-0">
+                <div v-for="other in otherMember">
+                  <OtherMember :other="other" />
                 </div>
+
               </div>
             </div>
           </div>
@@ -94,11 +96,14 @@ import SosmedCard from "~/components/card/SosmedCard.vue";
 import GlobalTitle from "~/components/GlobalTitle.vue";
 import TriviaCard from "~/components/card/TriviaCard.vue";
 import SingleCard from "~/components/card/SingleCard.vue";
+import OtherMember from "~/components/card/OtherMember.vue";
+import Gallery from "~/components/card/Gallery.vue";
 const {find} = useStrapi()
 const { id } = useRoute().params
 const {data: response} = await find(`members?filters[id][$eq]=${id}&populate[0]=profileImage.image&populate[1]=sosmed&populate[2]=otherNames&populate[3]=mainProfile&populate[4]=singles.cover`)
 const {data: trivia} = await find(`trivias?populate[0]=member&populate[1]=trivia&filters[member][id][$eq]=${id}`)
-const {data: gallery} = await find(`galleries?populate[0]=collection.image&populate[1]=member&filters[member][id][$eq]=${id}`)
+const {data: gallery} = await find(`galleries?populate[0]=collection.image&populate[1]=members&filters[members][id][$eq]=${id}`)
+const {data: otherMember} = await find(`members?populate=*&pagination[limit]=6&randomSort=true&filters[id][$notIn]=${id}`)
 
 </script>
 
@@ -109,5 +114,11 @@ const {data: gallery} = await find(`galleries?populate[0]=collection.image&popul
 }
 .headClass {
   text-transform: capitalize;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 </style>

@@ -5,8 +5,14 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Sakamichi Fansite',
+  meta : [
+    {name: "description", content: 'Sakamichi Series Nogizaka46 Sakurazaka46 Fan Site and Fan Page'}
+  ]
+})
 useSeoMeta({
-  title: 'Sakamichi Fansite Homepage ',
+  title: 'Sakamichi Fansite ',
   ogTitle: 'Fanpage where Talk about Sakamichi',
   description: 'This is a fan site where talk all about sakamichi members single and infomartion',
 })

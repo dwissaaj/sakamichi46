@@ -24,7 +24,7 @@
       <p class="text-sm">{{nogi.attributes.kanji}}</p>
       <p class="text-sm">{{nogi.attributes.birthplace}}</p>
     </div>
-    <div class="text-sm ring-2 hover:text-purple-500 mt-2 ring-rose-400 flex justify-center items-center gap-2 rounded-md">
+    <div class="text-sm ring-2 hover:text-red-500 mt-2 ring-rose-400 flex justify-center items-center gap-2 rounded-md">
       <NuxtLink class="" :to="`/members/${nogi.id}`">Details</NuxtLink>
       <Icon name="material-symbols:send-outline-rounded" />
     </div>
@@ -39,7 +39,7 @@
       <p class="text-sm">{{nogi.attributes.kanji}}</p>
       <p class="text-sm">{{nogi.attributes.birthplace}}</p>
     </div>
-    <div class="text-sm ring-2 hover:text-purple-500 mt-2 ring-cyan-400 flex justify-center items-center gap-2 rounded-md">
+    <div class="text-sm ring-2 hover:text-sky-500 mt-2 ring-cyan-400 flex justify-center items-center gap-2 rounded-md">
       <NuxtLink class="" :to="`/members/${nogi.id}`">Details</NuxtLink>
       <Icon name="material-symbols:send-outline-rounded" />
     </div>
