@@ -1,5 +1,5 @@
 <template>
-  <div class="greet flex gap-2 items-center text-2xl">
+  <div class="greet flex items-center text-2xl">
     <p>{{greets}}</p>
     <nuxt-link class="" :to="`${link}`">{{target}}</nuxt-link>
   </div>
@@ -8,6 +8,8 @@
 <script setup>
 
 const {greet} = defineProps(['greets','target','link'])
+
+const {data : member} = ''
 </script>
 
 <style scoped>

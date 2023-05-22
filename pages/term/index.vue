@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "schedule"
+  name: "index"
 }
 </script>
 
