@@ -13,11 +13,14 @@
           </div>
           <div class="flex items-center gap-2 border-zinc-500 rounded-lg border p-2 hover:bg-slate-400">
             <Icon name="ph:newspaper-bold" class="" />
-            <NuxtLink class="text-black line-through" href="/news">News</NuxtLink>
+            <button disabled class="text-black text-through" >News</button>
+            <div class="hidden hover:block hover:z-50">
+              <p>not supported yed</p>
+            </div>
           </div>
           <div class="flex items-center gap-2 border-zinc-500 rounded-lg border p-2 hover:bg-slate-400">
             <Icon name="material-symbols:calendar-month-outline" />
-            <NuxtLink class="text-black line-through" href="/single">Single</NuxtLink>
+            <NuxtLink class="text-black" href="/single">Single</NuxtLink>
           </div>
           <div class="yellow-block hover:ring-2 hover:ring-yellow-500 flex items-center gap-2 border-zinc-500 rounded-lg border p-2 hover:bg-slate-400">
             <Icon name="material-symbols:contact-support-outline-rounded" />

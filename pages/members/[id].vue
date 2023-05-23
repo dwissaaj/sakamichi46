@@ -55,7 +55,14 @@
                 <div v-for="other in otherMember">
                   <OtherMember :other="other" />
                 </div>
-
+              </div>
+            </div>
+            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8">
+              <GlobalTitle title="Advertising"/>
+              <div class="max-h-44 border rounded-md border-slate-500 bg-gray-200">
+                  <div class="grid grid-cols-6">
+                    <adsbygoogle />
+                  </div>
               </div>
             </div>
           </div>
@@ -67,19 +74,7 @@
           </div>
 
         </div>
-<!--        <div class="sticky m-0 block lg:hidden">-->
-<!--          <div class="w-full rounded-md border-2 border-slate-500">-->
-<!--            <div>-->
-<!--              {{member.attributes.name}}-->
-<!--              <span :class="`${member.attributes.lgOne}`">-->
-<!--                {{ member.attributes.lightcolor2 }}-->
-<!--              </span>-->
-<!--              <span :class="`${member.attributes.lgTwo} text-2xl`">-->
-<!--                {{ member.attributes.lightcolor1 }}-->
-<!--              </span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+
       </div>
 
     </div>
