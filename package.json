@@ -17,9 +17,11 @@
     "@types/node": "^18",
     "element-plus": "^2.3.4",
     "nuxt": "^3.4.3",
+    "nuxt-gtag": "^0.5.7",
     "nuxt-icon": "^0.4.0"
   },
   "dependencies": {
+    "@nuxtjs/google-adsense": "^2.1.0",
     "nuxt-icons": "^3.2.1",
     "nuxt-swiper": "^1.1.0"
   }

@@ -4,7 +4,7 @@
 export default defineNuxtConfig({
     modules: [
         "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon","@nuxtjs/strapi"
-        ,'@element-plus/nuxt','nuxt-swiper'
+        ,'@element-plus/nuxt','nuxt-swiper','@nuxtjs/google-adsense','nuxt-gtag'
     ],
     strapi: {
         url: process.env.STRAPI_URL || 'http://127.0.0.1:1337',
@@ -33,5 +33,11 @@ export default defineNuxtConfig({
             'Inter' : [100,300]
         }
     },
+    "google-adsense" : {
+        id: 'ca-pub-6939749049118846'
+    },
+    gtag: {
+        id: 'G-PYH3YVNSLG'
+    }
 
 })
