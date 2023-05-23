@@ -17,6 +17,10 @@
         -moz-box-shadow: 7px 5px 0px 0px rgba(20,173,255,1);
         box-shadow: 7px 5px 0px 0px rgba(20,173,255,1);
     }
+    .interFont {
+        font-family: 'Inter',sans-serif;
+        font-weight: lighter;
+    }
 
 /*var nogi : "#db00db"*/
 /*var hina : ##14adff*/

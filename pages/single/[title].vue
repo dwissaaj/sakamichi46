@@ -1,35 +1,113 @@
 <template>
-   <div v-for="single in response" class="w-full max-w-[1440px] interFont">
-     <div class="bg-gray-950 grid grid-cols-1 mt-6 mb-8 lg:mb-16 lg:mt-12 flex flex-col w-screen">
-       <div class="flex w-screen p-4 lg:p-8">
-         <div v-for="cover in single.attributes.cover">
-            <nuxt-img class="w-[250px]" provider="strapi" :src="`${cover.attributes.url}`" />
-         </div>
-       </div>
-       <div v-for="collect in single.attributes.otherCover">
-         <div v-for="imag in collect">
-           <div v-for="images in imag.attributes.url">
-             <p class="text-white">{{images}}</p>
+   <div v-for="single in singleData" class="w-full bg-black text-white mx-auto my-4 interFont">
+     <div class="grid grid-cols-1 mt-8 w-full ">
+       <section class="flex p-4 lg:p-8 justify-start ">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+           <div class="hover:relative hover:scale-150 hover:left-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
+             <nuxt-img class="w-[600px] shadow-xl shadow-slate-900 border border-white rounded-lg hover:border-2 hover:border-emerald-500" provider="strapi" :src="`${mainCover.attributes.url}`" />
            </div>
-           <Swiper>
-             <SwiperSlide v-for="slide in imag" :key="slide">
-               <p>{{slide}}</p>
-             </SwiperSlide>
-           </Swiper>
+           <div class="grid grid-rows-2 gap-0">
+             <div class="grid gap-2">
+               <p class="text-white border-l-2 border-t-2 border-rose-600 p-1">{{single.attributes.title}}</p>
+               <p class="text-white border-l-2 border-t-2 border-rose-600 p-1">{{single.attributes.kanji}}</p>
+               <p class="text-white border-l-2 border-t-2 border-rose-600 p-1">{{single.attributes.launch}}</p>
+               <p class="text-white border-l-2 border-t-2 border-rose-600 p-1 capitalize font-bold">{{single.attributes.label}}</p>
+             </div>
+             <div class="mt-10">
+               <p class="text-white text-xl font-bold">Senbatsu Member</p>
+               <div class="grid grid-cols-3"  v-for="senbatsu in single.attributes.members">
+                 <div v-for="memberSenbatsu in senbatsu">
+                   <div >
+                     <NuxtLink :to="`/members/${memberSenbatsu.id}`" class="text-white p-2 border-r-2 border-b-2 border-emerald-500  hover:text-emerald-600">{{memberSenbatsu.attributes.name}}</NuxtLink>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
          </div>
+       </section>
 
-       </div>
+       <section class="flex p-4 lg:p-8 justify-center">
+         <div class="grid grid-cols-1 lg:grid-cols-2  gap-4">
+             <div class="lg:mx-12">
+               <div class="hover:relative hover:scale-150 hover:left-[300px] " v-for="collec in single.attributes.otherCover">
+                 <Swiper
+                     :modules="[SwiperAutoplay]"
+                     :autoplay="{
+                  delay: 5000,
+                  disableOnInteraction: true,
+                  }">
+                   <SwiperSlide v-for="collection in collec" :key="collection" >
+                     <nuxt-img class="w-[500px] drop-shadow-2xl rounded-lg border-2 border-white hover:border-2 hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
+                   </SwiperSlide>
+                 </Swiper>
+               </div>
+           </div>
+           <div class="" >
+             <p class="text-white text-xl font-bold">Senbatsu Member</p>
+             <div class="grid grid-flow-row auto-rows-max gap-6">
+               <div class="border border-slate-400 p-3 rounded-md shadow-[7px_5px_0px_0px_rgba(80,200,120,0.85)]" v-for="otherSong in single.attributes.relatedSong">
+                 <div class="" v-for="relatedMenba in otherSong.members">
+                   <div class="">
+                     <p class="font-bold">{{otherSong.title}}</p>
+                     <div class="grid grid-cols-8">
+                       <div v-for="relatedMembers in relatedMenba">
+                         <NuxtLink :to="`/members/${relatedMembers.id}`" class="text-xs hover:text-emerald-600" >{{relatedMembers.attributes.name}}</NuxtLink>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+       <section class="flex p-4 lg:p-8 justify-center" >
+        <div class="w-full flex flex-col">
+          <GlobalTitle title="Trivia"/>
+          <div v-for="trivia in single.attributes.trivia" class="p-4 border-slate-400 border rounded-md w-full">
+            <ol class="text-white list-disc list-inside">
+              <li>{{trivia.trivia}}</li>
+            </ol>
+          </div>
+        </div>
+       </section>
      </div>
    </div>
 </template>
 
-<script setup>
-const {find} = useStrapi()
-const {title} = useRoute().params
-const {data: response} = await find(`singles?populate=*&filters[title][$eq]=${title}`)
+<script>
+import TriviaCard from "~/components/card/TriviaCard.vue";
+
+export default {
+  components: {TriviaCard},
+  setup() {
+
+  },
+  name: 'titleSingle',
+  data() {
+    return {
+      singleData: []
+    }
+  },
+  async created() {
+    const {find} = useStrapi()
+    const {title} = useRoute().params
+    const singleDatas = await find(`singles?populate[0]=members&&populate[1]=cover&populate[2]=relatedSong.members&populate[3]=otherCover&populate[4]=trivia&filters[title][$eq]=${title}`)
+    this.setPost(singleDatas)
+  },
+  methods: {
+    setPost(response) {
+      this.singleData = response.data;
+    },
+  }
+}
 
 </script>
 
 <style scoped>
-
+.interFont {
+  font-family: 'Inter',sans-serif;
+  font-weight: lighter;
+}
 </style>
