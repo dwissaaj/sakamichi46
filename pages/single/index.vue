@@ -1,5 +1,11 @@
 <template>
   <div class="w-full interFont bg-gray-950">
+    <Head>
+      <Title>Sakamichi Singles</Title>
+      <Meta charset="UTF-8"></Meta>
+      <Meta name="description" content="All Sakamichi series Nogizaka46 Sakurazaka46 Hinatazaka46 Single & Albums" />
+      <Meta name="keywords" content="Nogizaka46, Sakurazaka46, Hinatazaka46 Single & Albums" />
+    </Head>
     <div class="w-full bg-gray-950 mt-6 mb-8 lg:mb-16 lg:mt-12 flex flex-col">
       <div class="flex flex-col justify-center ">
         <div class="flex justify-center mb-4">
@@ -59,8 +65,6 @@ export default {
       try {
         const {data} = await find(`singles?populate[0]=cover&sort[1]=launch%3Adesc&filters[group][$eq]=${btnValue}`)
         this.allSingle = data
-        console.log(this.single)
-        console.log(btnValue)
       }
       catch (e) {
         console.log(e)
@@ -68,16 +72,10 @@ export default {
     },
     getAllSingle(response) {
       this.allSingle = response.data
-      console.log(response)
     }
   }
 }
-useHead({
-  title: 'Sakamichi Single',
-  meta: [
-    {name: "description", content: 'Sakamichi All Singles'}
-  ]
-})
+
 </script>
 
 <style scoped>

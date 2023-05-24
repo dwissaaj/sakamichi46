@@ -14,12 +14,7 @@
 export default {
   name: "help"
 }
-useHead({
-  title: 'Sakamichi Help',
-  meta : [
-    {name: "description", content: 'Sakamichi Series Nogizaka46 Sakurazaka46 Fan Site and Fan Page'}
-  ]
-})
+
 </script>
 
 <style scoped>

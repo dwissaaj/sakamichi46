@@ -34,12 +34,6 @@
 </template>
 
 <script setup>
-
-const {find} = useStrapi()
-const {data: responseNogizaka} = await find('members?populate=*&filters[group][$eq]=Nogizaka46')
-const {data: responseSakurazaka} = await find('members?populate=*&filters[group][$eq]=Sakurazaka46')
-const {data: responseHinatazaka} = await find('members?populate=*&filters[group][$eq]=Hinatazaka46')
-
 useHead({
   title: 'Sakamichi Members',
   meta: [
@@ -47,10 +41,19 @@ useHead({
   ]
 })
 useSeoMeta({
-  title: 'Sakamichi Fansite',
+  title: 'Sakamichi Members',
   ogTitle: 'Talk about Sakamichi',
-  description: 'This is a fan site where talk all about sakamichi members single and infomartion',
+  description: 'This is a fan site where talk all about sakamichi members single and information',
 })
+import CardNogi from "~/components/CardNogi.vue";
+import Greet from "~/components/Greet.vue";
+
+const {find} = useStrapi()
+const {data: responseNogizaka} = await find('members?populate=*&filters[group][$eq]=Nogizaka46')
+const {data: responseSakurazaka} = await find('members?populate=*&filters[group][$eq]=Sakurazaka46')
+const {data: responseHinatazaka} = await find('members?populate=*&filters[group][$eq]=Hinatazaka46')
+
+
 </script>
 
 <style scoped>

@@ -1,5 +1,11 @@
 <template>
    <div v-for="single in singleData" class="w-full bg-black text-white mx-auto my-4 interFont">
+       <Head>
+         <Title>{{single.attributes.group}} {{single.attributes.title}} </Title>
+         <Meta charset="UTF-8"></Meta>
+         <Meta name="description" :content="`${single.attributes.description}`" />
+         <Meta name="keywords" :content="`${single.attributes.tagsSeo}`" />
+       </Head>
      <div class="grid grid-cols-1 mt-8 w-full ">
        <section class="flex p-4 lg:p-8 justify-start ">
          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -93,7 +99,7 @@ export default {
   async created() {
     const {find} = useStrapi()
     const {title} = useRoute().params
-    const singleDatas = await find(`singles?populate[0]=members&&populate[1]=cover&populate[2]=relatedSong.members&populate[3]=otherCover&populate[4]=trivia&filters[title][$eq]=${title}`)
+    const singleDatas = await find(`singles?populate[0]=members&&populate[1]=cover&populate[2]=relatedSong.members&populate[3]=otherCover&populate[4]=trivia&populate[5]=tagSeo&filters[title][$eq]=${title}`)
     this.setPost(singleDatas)
   },
   methods: {

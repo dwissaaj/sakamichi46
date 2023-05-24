@@ -2,9 +2,9 @@
   <div class="w-full max-w-[1440px] mx-auto interFont" v-for="member in response" key="member.id">
     <Head>
       <Title>{{member.attributes.group}} {{member.attributes.name}}</Title>
+      <Meta charset="UTF-8"></Meta>
       <Meta name="description" :content="member.attributes.description" />
-      <Meta name="keywords" :content="`${member.attributes.kanji} ${member.attributes.name}`" />
-
+      <Meta name="keywords" :content="`${member.attributes.tagseo}`" />
     </Head>
     <div class="px-4 lg:px-16 ">
       <div class="w-full flex flex-col">
