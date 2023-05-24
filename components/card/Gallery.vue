@@ -3,7 +3,7 @@
     <div class="" v-for="data in dataGallery">
       <div v-for="data2 in data.attributes.collection">
         <div v-for="data3 in data2.image.data">
-          <nuxt-img class="hover:scale-[2.0] flex gap-3 ring-1 ring-black rounded-md" provider="strapi" :src="`${data3.attributes.url}`" />
+          <nuxt-img class="transition ease-in-out duration-300 hover:scale-[2.0] flex gap-3 ring-1 ring-black rounded-md" provider="strapi" :src="`${data3.attributes.url}`" />
         </div>
       </div>
     </div>

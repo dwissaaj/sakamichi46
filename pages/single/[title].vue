@@ -3,7 +3,7 @@
      <div class="grid grid-cols-1 mt-8 w-full ">
        <section class="flex p-4 lg:p-8 justify-start ">
          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-           <div class="hover:relative hover:scale-150 hover:left-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
+           <div class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
              <nuxt-img class="w-[600px] shadow-xl shadow-slate-900 border border-white rounded-lg hover:border-2 hover:border-emerald-500" provider="strapi" :src="`${mainCover.attributes.url}`" />
            </div>
            <div class="grid grid-rows-2 gap-0">
@@ -28,17 +28,17 @@
        </section>
 
        <section class="flex p-4 lg:p-8 justify-center">
-         <div class="grid grid-cols-1 lg:grid-cols-2  gap-4">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
              <div class="lg:mx-12">
-               <div class="hover:relative hover:scale-150 hover:left-[300px] " v-for="collec in single.attributes.otherCover">
+               <div class=" " v-for="collec in single.attributes.otherCover">
                  <Swiper
                      :modules="[SwiperAutoplay]"
                      :autoplay="{
-                  delay: 5000,
+                  delay: 1000,
                   disableOnInteraction: true,
-                  }">
-                   <SwiperSlide v-for="collection in collec" :key="collection" >
-                     <nuxt-img class="w-[500px] drop-shadow-2xl rounded-lg border-2 border-white hover:border-2 hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
+                  }" class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
+                   <SwiperSlide class=""  v-for="collection in collec" :key="collection" >
+                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
                    </SwiperSlide>
                  </Swiper>
                </div>
