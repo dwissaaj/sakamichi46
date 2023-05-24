@@ -1,5 +1,5 @@
 <template>
-  <div class="greet title flex uppercase items-center text-2xl">
+  <div class="greet title text-white flex uppercase items-center text-2xl">
     <p>{{title}}</p>
   </div>
 </template>

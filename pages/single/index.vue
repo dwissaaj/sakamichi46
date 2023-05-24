@@ -1,24 +1,24 @@
 <template>
-  <div class="w-full interFont bg-gray-950">
+  <div class="w-full interFont ">
     <Head>
       <Title>Sakamichi Singles</Title>
       <Meta charset="UTF-8"></Meta>
       <Meta name="description" content="All Sakamichi series Nogizaka46 Sakurazaka46 Hinatazaka46 Single & Albums" />
       <Meta name="keywords" content="Nogizaka46, Sakurazaka46, Hinatazaka46 Single & Albums" />
     </Head>
-    <div class="w-full bg-gray-950 mt-6 mb-8 lg:mb-16 lg:mt-12 flex flex-col">
+    <div class="w-full h-screen bg-zinc-950 flex flex-col">
       <div class="flex flex-col justify-center ">
         <div class="flex justify-center mb-4">
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 justify-items-center justify-center items-center">
           <div class="">
-            <button @click="getSingle" value="Nogizaka46" class="active:ring-emerald-500 active:ring-2 bg-purple-500 p-3 rounded-md text-white" >Nogizaka46</button>
+            <button @click="getSingle" value="Nogizaka46" class="bg-purple-500 hover:brightness-150 p-3 rounded-lg hover:shadow-xl hover:shadow-zinc-900 text-black" >Nogizaka46</button>
           </div>
           <div>
-            <button @click="getSingle" value="Sakurazaka46" class="bg-red-500 p-3 rounded-md text-white" >Sakurazaka46</button>
+            <button @click="getSingle" value="Sakurazaka46" class="bg-red-500 hover:brightness-150 p-3 rounded-lg hover:shadow-xl hover:shadow-zinc-900 text-black" >Sakurazaka46</button>
           </div>
           <div>
-            <button @click="getSingle" value="Hinatazaka46" class="bg-sky-400 p-3 rounded-md text-white" >Hinatazaka46</button>
+            <button @click="getSingle" value="Hinatazaka46" class="bg-sky-400 hover:brightness-150 p-3 rounded-lg hover:shadow-xl hover:shadow-zinc-900 text-black" >Hinatazaka46</button>
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-2 interFont text-white capitalize p-4 bg-stale-500 mt-6" >

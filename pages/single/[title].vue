@@ -1,12 +1,12 @@
 <template>
-   <div v-for="single in singleData" class="w-full bg-black text-white mx-auto my-4 interFont">
+   <div v-for="single in singleData" class="w-full bg-black text-white interFont">
        <Head>
          <Title>{{single.attributes.group}} {{single.attributes.title}} </Title>
          <Meta charset="UTF-8"></Meta>
          <Meta name="description" :content="`${single.attributes.description}`" />
          <Meta name="keywords" :content="`${single.attributes.tagsSeo}`" />
        </Head>
-     <div class="grid grid-cols-1 mt-8 w-full ">
+     <div class="grid grid-cols-1 my-20">
        <section class="flex p-4 lg:p-8 justify-start ">
          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
            <div class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
@@ -40,9 +40,9 @@
                  <Swiper
                      :modules="[SwiperAutoplay]"
                      :autoplay="{
-                  delay: 1000,
+                  delay: 3000,
                   disableOnInteraction: true,
-                  }" class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
+                  }" class=" transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
                    <SwiperSlide class=""  v-for="collection in collec" :key="collection" >
                      <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
                    </SwiperSlide>
