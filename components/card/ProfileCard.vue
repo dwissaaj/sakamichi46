@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 p-2 gap-2 capitalize globalFont text-white border-2 rounded-md border-zinc-300 transition ease-in-out duration-300 hover:translate-x-6 shadow-[7px_5px_0px_0px_rgba(219,0,219,1)] hover:shadow-[-20px_-25px_0px_-14px_rgba(219,0,219,1)]">
+  <div class="grid grid-cols-2 p-2 gap-2 capitalize globalFont text-white border-2 rounded-md border-zinc-300 transition ease-in-out duration-300 hover:-translate-x-8 shadow-[7px_5px_0px_0px_rgba(219,0,219,1)] hover:shadow-[-20px_-25px_0px_-14px_rgba(219,0,219,1)]">
     <div class="" v-for="image in dataMember.attributes.mainProfile">
       <nuxt-img class="rounded-md transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[50px] cursor-zoom-in shadow-lg shadow-slate-800" provider="strapi" :src="`${image.attributes.url}`" />
     </div>

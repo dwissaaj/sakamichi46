@@ -68,7 +68,7 @@
               </div>
 
             </div>
-            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8">
+            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8 mb-4">
               <GlobalTitle title="Advertising"/>
               <div class="h-30 border rounded-md border-zinc-300 bg-zinc-800">
                   <div class="h-30">

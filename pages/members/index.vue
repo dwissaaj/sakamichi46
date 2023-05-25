@@ -3,7 +3,7 @@
     <div class="p-12">
       <div class="">
         <Greet :target="'Nogizaka46'" :link="'/'" />
-        <div class="grid grid-cols-1 lg:grid-cols-5 globalFont">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-12 globalFont">
           <div  v-for="member in responseNogizaka" :key="member.id">
             <CardNogi :nogi="member" />
           </div>
@@ -11,7 +11,7 @@
       </div>
       <div class="mt-4">
         <Greet :target="'Sakurazaka46'" :link="'/'" />
-        <div class="grid grid-cols-1 lg:grid-cols-5 globalFont">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-6  globalFont">
           <div  v-for="member in responseSakurazaka" :key="member.id">
             <CardNogi :nogi="member" />
           </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="mt-4">
         <Greet :target="'Hinatazaka46'" :link="'/'" />
-        <div class="grid grid-cols-1 lg:grid-cols-5 globalFont">
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 lg:gap-6  globalFont">
           <div  v-for="member in responseHinatazaka" :key="member.id">
             <CardNogi :nogi="member" />
           </div>
@@ -36,11 +36,7 @@ useHead({
     {name: "description", content: 'Sakamichi All Members'}
   ]
 })
-useSeoMeta({
-  title: 'Sakamichi Members',
-  ogTitle: 'Talk about Sakamichi',
-  description: 'This is a fan site where talk all about sakamichi members single and information',
-})
+
 import CardNogi from "~/components/CardNogi.vue";
 import Greet from "~/components/Greet.vue";
 
