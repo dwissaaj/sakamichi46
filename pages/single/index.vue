@@ -22,8 +22,8 @@
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-2 interFont text-white capitalize p-4 bg-stale-500 mt-6" >
-          <div class="border-white divide-y divide-white" v-for="post in allSingle">
-            <div class="" v-for="mainCover in post.attributes.cover">
+          <div class="border-white divide-y divide-white" v-for="post in allSingle" :key="post.id">
+            <div class="" v-for="mainCover in post.attributes.cover" :key="mainCover">
               <NuxtLink class="" :to="`/single/${post.attributes.title}`">
                 <div class="flex flex-col space-y-1 ">
                   <nuxt-img class="h-[150px] rounded-lg object-cover hover:brightness-50" provider="strapi" :src="`${mainCover.attributes.url}`" />

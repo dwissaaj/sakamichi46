@@ -81,9 +81,10 @@
             <div class="w-full flex flex-col hidden md:block  ">
               <div v-for="data1 in member.attributes.oldProfile">
                 <Swiper
-                    :modules="[SwiperAutoplay]"
+                    :modules="[SwiperAutoplay,EffectCards]"
+                    :effect="'cards'"
                     :autoplay="{
-                  delay: 5000,
+                  delay: 4000,
                   disableOnInteraction: false,
                   }" class="transition ease-out duration-300 hover:rotate-12  ">
                   <SwiperSlide class=""  v-for="data2 in data1" :key="data2" >
@@ -112,6 +113,7 @@ import SingleCard from "~/components/card/SingleCard.vue";
 import OtherMember from "~/components/card/OtherMember.vue";
 import Gallery from "~/components/card/Gallery.vue";
 import Biodata from "~/components/card/Biodata.vue";
+import {EffectCards} from "swiper";
 const {find} = useStrapi()
 const { id } = useRoute().params
 const {data: response} = await find(`members?filters[id][$eq]=${id}&populate[0]=oldProfile&populate[1]=sosmed&populate[2]=otherNames&populate[3]=mainProfile&populate[4]=singles.cover`)
