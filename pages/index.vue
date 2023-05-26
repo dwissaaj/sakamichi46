@@ -11,7 +11,7 @@
                   <div class="col-span-3 flex justify-center">
                     <p class="text-justify">{{ nogizaka.attributes.description }}</p>
                   </div>
-                  <div class="col-span-6">
+                  <div class=" hidden lg:col-span-6">
                     <template v-for="carouselImage in nogizaka.attributes.carousel">
                       <div
                           class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(219,0,219,1)] hover:-translate-x-6">
@@ -206,7 +206,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-sky-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in sakurazakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -235,7 +235,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-sky-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -264,7 +264,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-sky-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -293,7 +293,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-sky-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -310,7 +310,7 @@
             </template>
           </div>
           <div class="space-y-6 mt-4 lg:mt-8">
-            <p class="text-4xl text-white text-start">Nogizaka46</p>
+            <p class="text-4xl text-white text-start">Hinatazaka46</p>
             <template v-for="hinatazaka in homepageHinatazaka">
               <div class="w-full flex flex-col space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
@@ -320,7 +320,7 @@
                   <div class="col-span-6">
                     <template v-for="carouselImage in hinatazaka.attributes.carousel">
                       <div
-                          class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(219,0,219,1)] hover:-translate-x-6">
+                          class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(0,208,255,0.91)] hover:-translate-x-6">
                         <Swiper
                             :modules="[SwiperAutoplay,EffectFade]"
                             :effect="'fade'"
@@ -342,8 +342,8 @@
                 <div class="w-full flex justify-center">
                   <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
                     <div class="">
-                      <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single1">
+                      <template v-for="hinatazaka in homepageHinatazaka">
+                        <template v-for="nogizakasingle2 in hinatazaka.attributes.single1">
                           <div class="">
                             <Swiper
                                 :modules="[SwiperAutoplay,EffectCube]"
@@ -359,7 +359,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-sky-500 hover:ring-purple-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -372,7 +372,7 @@
                     </div>
                     <div class="">
                       <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single2">
+                        <template v-for="nogizakasingle2 in hinatazaka.attributes.single2">
                           <div class="">
                             <Swiper
                                 :modules="[SwiperAutoplay,EffectCube]"
@@ -388,7 +388,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-sky-500 hover:ring-purple-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -401,7 +401,7 @@
                     </div>
                     <div class="">
                       <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single4">
+                        <template v-for="nogizakasingle2 in hinatazaka.attributes.single4">
                           <div class="">
                             <Swiper
                                 :modules="[SwiperAutoplay,EffectCube]"
@@ -417,7 +417,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-sky-500 hover:ring-purple-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -430,7 +430,7 @@
                     </div>
                     <div class="">
                       <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single5">
+                        <template v-for="nogizakasingle2 in hinatazaka.attributes.single5">
                           <div class="">
                             <Swiper
                                 :modules="[SwiperAutoplay,EffectCube]"
@@ -446,7 +446,7 @@
                               delay: 4000,
                               disableOnInteraction: false,
                               }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
+                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-sky-500 hover:ring-purple-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
                               <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
                                 <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
                                           provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
@@ -457,6 +457,7 @@
                         </template>
                       </template>
                     </div>
+
                   </div>
                 </div>
               </div>
