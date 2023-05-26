@@ -1,7 +1,7 @@
 <template>
   <div class="greet flex items-center text-2xl">
     <p>{{greets}}</p>
-    <nuxt-link class="" :to="`${link}`">{{target}}</nuxt-link>
+    <nuxt-link class="text-white" :to="`${link}`">{{target}}</nuxt-link>
   </div>
 </template>
 

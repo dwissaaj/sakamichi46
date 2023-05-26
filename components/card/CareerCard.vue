@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 border border-black bg-slate-200 rounded-md">
+  <div class="flex flex-col gap-1 justify-start border border-black bg-slate-200 rounded-md">
     <Icon class="w-12 h-8" name="ph:microphone-stage-fill" />
     <p>{{memberCareer.attributes.group}}</p>
     <p>{{memberCareer.attributes.generation}}th generation</p>
