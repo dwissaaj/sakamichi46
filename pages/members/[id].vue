@@ -68,11 +68,15 @@
               </div>
 
             </div>
-            <div class="w-full hidden md:block flex flex-col mt-4 lg:mt-8 mb-4">
+            <div class="w-full flex flex-col mt-4 lg:mt-8 mb-4">
               <GlobalTitle title="Advertising"/>
-              <div class="h-30 border rounded-md border-zinc-300 bg-zinc-800">
-                  <div class="h-30">
+              <div class="border rounded-md border-zinc-300 bg-zinc-800">
+                <div class="w-full grid grid-cols-6 max-h-96 ">
+                  <div v-for="x in 6">
+                    {{x}}
+                    <adsbygoogle />
                   </div>
+                </div>
               </div>
             </div>
           </div>

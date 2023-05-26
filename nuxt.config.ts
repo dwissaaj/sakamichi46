@@ -34,10 +34,13 @@ export default defineNuxtConfig({
         }
     },
     "google-adsense" : {
-        id: 'ca-pub-6939749049118846'
+        id: 'ca-pub-6939749049118846',
+
     },
     gtag: {
-        id: 'G-PYH3YVNSLG'
-    }
+        id: 'G-HRXCTT3KDM'
+    },
+
+
 
 })

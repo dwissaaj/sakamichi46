@@ -36,7 +36,7 @@
 
          <section class="flex p-4 lg:p-8 justify-center">
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-             <div class="lg:mx-12">
+             <div class="flex flex-col space-y-12">
                <div class=" " v-for="collec in single.attributes.otherCover">
                  <Swiper
                      :modules="[SwiperAutoplay]"
@@ -46,6 +46,29 @@
                   }" class=" transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
                    <SwiperSlide class=""  v-for="collection in collec" :key="collection" >
                      <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
+                   </SwiperSlide>
+                 </Swiper>
+               </div>
+               <div class=" " v-for="back in single.attributes.backcover">
+                 <Swiper
+                     :modules="[SwiperAutoplay,SwiperEffectCoverflow]"
+                     :effect="'coverflow'"
+                     :slidesPerView="'3'"
+
+
+                     :coverflowEffect="{
+                          rotate: 50,
+                          stretch: 0,
+                          depth: 100,
+                          modifier: 1,
+                          slideShadows: true,
+                        }"
+                     :autoplay="{
+                  delay: 3000,
+                  disableOnInteraction: true,
+                  }" class=" transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
+                   <SwiperSlide class=""  v-for="backcovers in back" :key="backcovers" >
+                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${backcovers.attributes.url}`"  />
                    </SwiperSlide>
                  </Swiper>
                </div>
@@ -79,6 +102,19 @@
              </div>
            </div>
          </section>
+         <section class="flex p-4 lg:p-8 justify-center" >
+           <div class="w-full flex flex-col">
+             <GlobalTitle title="Advertising"/>
+             <div class="p-4 border-slate-400 border rounded-md w-full">
+               <div class="w-full grid grid-cols-6 max-h-96 ">
+                 <div v-for="x in 6">
+                   {{x}}
+                   <adsbygoogle />
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
        </div>
      </div>
    </ClientOnly>
@@ -101,7 +137,7 @@ export default {
   async created() {
     const {find} = useStrapi()
     const {title} = useRoute().params
-    const singleDatas = await find(`singles?populate[0]=members&&populate[1]=cover&populate[2]=relatedSong.members&populate[3]=otherCover&populate[4]=trivia&populate[5]=tagSeo&filters[title][$eq]=${title}`)
+    const singleDatas = await find(`singles?populate[0]=members&&populate[1]=cover&populate[2]=relatedSong.members&populate[3]=otherCover&populate[4]=trivia&populate[5]=backcover&filters[title][$eq]=${title}`)
     this.setPost(singleDatas)
   },
   methods: {

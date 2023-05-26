@@ -21,7 +21,7 @@
             <button @click="getSingle" value="Hinatazaka46" class="bg-sky-400 hover:brightness-150 p-3 rounded-lg hover:shadow-xl hover:shadow-zinc-900 text-black" >Hinatazaka46</button>
           </div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-6 gap-2 interFont text-white capitalize p-4 bg-stale-500 mt-6" >
+        <div class="grid grid-cols-1 lg:grid-cols-8 gap-2 interFont text-white capitalize p-4 bg-stale-500 mt-6" >
           <div class="border-white divide-y divide-white" v-for="post in allSingle" :key="post.id">
             <div class="" v-for="mainCover in post.attributes.cover" :key="mainCover">
               <NuxtLink class="" :to="`/single/${post.attributes.title}`">

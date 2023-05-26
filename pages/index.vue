@@ -480,6 +480,7 @@ useSeoMeta({
   ogTitle: 'Talk about Sakamichi',
   description: 'This is a fan site where talk all about sakamichi members single and information',
 })
+
 </script>
 
 <style scoped>
