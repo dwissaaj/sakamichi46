@@ -8,63 +8,36 @@
   </Head>
 
   <div class="w-full h-screen bg-black  text-white interFont ">
-    <div class="">
-<!--      <GlobalTitle title="Advertising" />-->
-<!--      <p>Help us by click this ads, check our term of use</p>-->
-<!--      <GlobalTitle title="Other Donation" />-->
-<!--      <NuxtLink class="hover:text-emerald-500 hover:underline" to="https://www.buymeacoffee.com/sakamichionline">You can also help me pay the bills in here </NuxtLink>-->
-      <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-2  p-4">
-        <div class="border-2 ">
-          <p>1</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>2</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>3</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>4</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>5</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>6</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>7</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>8</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>9</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>10</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>11</p>
-          <adsbygoogle />
-        </div>
-        <div>
-          <p>12</p>
-          <adsbygoogle />
-        </div>
-
+    <div class="flex flex-col p-6 justify-start">
+      <div>
+        <GlobalTitle title="Advertising" />
+        <p class="text-start">Help us by click this ads, check our term of use</p>
       </div>
+      <div>
+        <GlobalTitle title="Other Donation" />
+        <p class="text-start hover:text-emerald-500 hover:underline" >You can also help me pay the bills in
 
+        </p>
+        <div class="flex flex-row space-x-6">
+          <div class="w-20 md:w-40">
+            <NuxtLink to="https://www.buymeacoffee.com/sakamichionline" class="" >
+              <nuxt-img src="bmc-button.png" />
+            </NuxtLink>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden md:block p-4">
+      <GlobalTitle title="Advertising" />
+      <div class="p-4 rounded-lg border-2 border-white">
+        <div class=" p-3 gap-3">
+          <adsbygoogle  ad-style="hidden"
+                        ad-format="autorelaxed"
+                        ad-client="ca-pub-6939749049118846"
+                        ad-slot="2870384264" />
+        </div>
+      </div>
     </div>
 
   </div>

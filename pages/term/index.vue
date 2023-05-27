@@ -33,9 +33,43 @@
     </div>
     <div class="p-2 lg:p-8">
       <GlobalTitle title="Help Us by click this ads" />
-      <div class="max-h-44 lg:h-56 lg:max-h-80 border-2 p-3 rounded-lg ">
-            <adsbygoogle />
+      <div class="grid grid-cols-1 lg:grid-cols-6  border-2 p-3 rounded-lg ">
+        <template v-for="x in 6">
+          <div>
+            <adsbygoogle   />
+          </div>
+        </template>
+<!--        <div>-->
+<!--          <adsbygoogle   />-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <adsbygoogle   />-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <adsbygoogle   />-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <adsbygoogle   />-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <adsbygoogle   />-->
+<!--        </div>-->
       </div>
+    </div>
+    <div class="p-2 lg:p-8">
+      <GlobalTitle title="Help Us by click this ads" />
+
+        <div>
+          <adsbygoogle />
+        </div>
+
+
+
+<!--        <adsbygoogle-->
+<!--                     ad-format="autorelaxed"-->
+<!--                    :ad-style="{display: 'inline-block', width:'800px', height: '300px'}"-->
+<!--                     ad-client="ca-pub-6939749049118846" />-->
+
     </div>
     <div>
     </div>

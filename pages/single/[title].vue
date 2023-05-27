@@ -106,11 +106,12 @@
            <div class="w-full flex flex-col">
              <GlobalTitle title="Advertising"/>
              <div class="p-4 border-slate-400 border rounded-md w-full">
-               <div class="w-full grid grid-cols-6 max-h-96 ">
-                 <div v-for="x in 6">
-                   {{x}}
-                   <adsbygoogle />
-                 </div>
+               <div class=" max-h-96 ">
+                   <adsbygoogle :ad-style="{'height': 300 + 'px', 'display' :'block'}"
+                                ad-format="autorelaxed"
+                                ad-client="ca-pub-6939749049118846"
+                               ad-slot="5752532626"
+                   />
                </div>
              </div>
            </div>

@@ -68,6 +68,42 @@
     <main class="">
       <slot />
     </main>
+    <footer >
+          <div class="w-full bg-zinc-800 text-white static ">
+            <div class="w-full flex flex-col justify-center p-4 ">
+              <div class="grid grid-cols-1 lg:grid-cols-2 p-4 gap-4 lg:gap-8 justify-items-center">
+                  <div>
+                    <p class="font-bold text-lg text-start" >About Us</p>
+                    <NuxtLink to="/term">Term of Use</NuxtLink>
+                    <h2 class="text-lg font-bold ">Contact Us</h2>
+                    <p class="text-start">
+                      any question contact us</p>
+                    <a class="underline" href="mailto:sakamichi.online@gmail.com">sakamichi.online@gmail.com</a>
+                    <div class="space-x-6">
+                      <NuxtLink to="https://twitter.com/PrincePositif" >Instagram</NuxtLink>
+                      <NuxtLink to="https://instagram.com/tsusui.rei?igshid=MzNlNGNkZWQ4Mg==" class="">Twitter</NuxtLink>
+                    </div>
+                  </div>
+
+                <div>
+                  <div class="flex flex-col gap-2 col-span-12 md:col-span-1 justify-center">
+                    <p class="text-lg font-bold text-start">Official Website</p>
+                    <div class="grid grid-cols-3 gap-6 justify-items-center">
+                      <NuxtLink to="https://www.nogizaka46.com/"><nuxt-img src="nogizaka46.png" class="w-10 lg:w-20"  alt="nogizaka logo" /></NuxtLink>
+                      <NuxtLink to="https://sakurazaka46.com/"><nuxt-img src="sakurazaka46.png" class="w-10 lg:w-20" alt="sakura logo" /></NuxtLink>
+                      <NuxtLink to="https://www.hinatazaka46.com/s/official/?ima=0000"><nuxt-img src="hinatazaka46.png" class="w-10 lg:w-20" alt="hinata logo" /></NuxtLink>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div>
+                <p class="w-full border-t-2 p-2 mt-3">Copyright Sakamichi.online 2023 - All right reserved</p>
+              </div>
+            </div>
+
+          </div>
+    </footer>
 
 
 
@@ -81,6 +117,8 @@ export default {
   name: "default",
   components: {FooterLayout}
 }
+
+
 </script>
 
 <style scoped>
