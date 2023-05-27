@@ -68,15 +68,14 @@
               </div>
 
             </div>
-            <div class="w-full flex flex-col mt-4 lg:mt-8 mb-4">
+            <div class="w-full flex flex-col mt-4 lg:mt-8 mb-4 max-h-52 max-h-82">
               <GlobalTitle title="Advertising"/>
-              <div class="border rounded-md border-zinc-300 bg-zinc-800">
-                <div class="w-full grid grid-cols-6 max-h-96 ">
-                  <div v-for="x in 6">
-                    {{x}}
-                    <adsbygoogle />
-                  </div>
-                </div>
+              <div class="border rounded-md border-zinc-300 bg-zinc-800 h-82">
+                <adsbygoogle :ad-style="{display:'block', }"
+                             ad-client="ca-pub-6939749049118846"
+                             ad-slot="9464546928"
+                             ad-format="auto"
+                             full-width-responsive="full-width-responsive"/>
               </div>
             </div>
           </div>

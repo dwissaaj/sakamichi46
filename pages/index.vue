@@ -11,456 +11,105 @@
                   <div class="col-span-3 flex justify-center">
                     <p class="text-justify">{{ nogizaka.attributes.description }}</p>
                   </div>
-                  <div class="col-span-6">
-                    <template v-for="carouselImage in nogizaka.attributes.carousel">
-                      <div
-                          class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(219,0,219,1)] hover:-translate-x-6">
-                        <Swiper
-                            :modules="[SwiperAutoplay,EffectFade]"
-                            :effect="'fade'"
-                            :autoplay="{
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        }" class=" ">
-                          <SwiperSlide class="rounded-lg  hover:brightness-75
-                        transition ease-in-out duration-300 " v-for="images in carouselImage" :key="images">
-                            <nuxt-img class="rounded-lg shadow-lg origin-center shadow-stale-600" alt=""
-                                      provider="strapi" :src="`${images.attributes.url}`"/>
-
-                          </SwiperSlide>
-                        </Swiper>
-                      </div>
-                    </template>
+                  <div class=" lg:block lg:col-span-6">
+                    <GroupHomepage :swipernogi="nogizaka" />
                   </div>
                 </div>
                 <div class="w-full flex justify-center">
                   <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
                     <div class="">
-                      <template v-for="nogizakasingle in homepageNogizaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single1">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox1 :boxSwiper="homepageNogizaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageNogizaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single2">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox2 :boxSwiper="homepageNogizaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageNogizaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single4">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox3 :boxSwiper="homepageNogizaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageNogizaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single5">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox4 :boxSwiper="homepageNogizaka" />
                     </div>
                   </div>
                 </div>
               </div>
             </template>
           </div>
-          <div class="space-y-6 mt-4 lg:mt-8">
-            <p class="text-4xl text-white text-end">Sakurazaka46</p>
-            <template v-for="sakurazaka in homepageSakurazaka">
-              <div class="w-full flex flex-col space-y-12 ">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 ">
-                  <div class="col-start-3 col-end-9">
-                    <template v-for="carouselImage in sakurazaka.attributes.carousel">
-                      <div
-                          class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(236,72,153,0.75)] hover:-translate-x-6">
-                        <Swiper
-                            :modules="[SwiperAutoplay,EffectFade]"
-                            :effect="'fade'"
-                            :autoplay="{
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        }" class=" ">
-                          <SwiperSlide class="rounded-lg  hover:brightness-75
-                        transition ease-in-out duration-300 " v-for="images in carouselImage" :key="images">
-                            <nuxt-img class="rounded-lg shadow-lg origin-center shadow-stale-600" alt=""
-                                      provider="strapi" :src="`${images.attributes.url}`"/>
 
-                          </SwiperSlide>
-                        </Swiper>
-                      </div>
-                    </template>
-                  </div>
-                  <div class="col-start-9 col-end-13 ">
+
+          <div class="space-y-6 mt-4 lg:mt-8">
+            <p class="text-4xl text-white text-start">Sakurazaka46</p>
+            <template v-for="sakurazaka in homepageSakurazaka">
+              <div class="w-full flex flex-col space-y-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+                  <div class="col-span-3 flex justify-center">
                     <p class="text-justify">{{ sakurazaka.attributes.description }}</p>
                   </div>
+                  <div class=" lg:block lg:col-span-6">
+                    <GroupHomepage :swipernogi="sakurazaka" />
+                  </div>
                 </div>
-                <div class="w-full flex justify-end">
-                  <div class="grid grid-cols-2 md:grid-cols-8 gap-6  ">
+                <div class="w-full flex justify-center">
+                  <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
                     <div class="">
-                      <template v-for="sakurazakasingle in homepageSakurazaka">
-                        <template v-for="sakurazakasingle2 in sakurazakasingle.attributes.single1">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-pink-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in sakurazakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox1 :boxSwiper="homepageSakurazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageSakurazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single2">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox2 :boxSwiper="homepageSakurazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageSakurazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single4">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox3 :boxSwiper="homepageSakurazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageSakurazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single5">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox4 :boxSwiper="homepageSakurazaka" />
                     </div>
                   </div>
                 </div>
               </div>
             </template>
           </div>
+
+
           <div class="space-y-6 mt-4 lg:mt-8">
-            <p class="text-4xl text-white text-start">Nogizaka46</p>
+            <p class="text-4xl text-white text-start">Hinatazaka46</p>
             <template v-for="hinatazaka in homepageHinatazaka">
               <div class="w-full flex flex-col space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
                   <div class="col-span-3 flex justify-center">
                     <p class="text-justify">{{ hinatazaka.attributes.description }}</p>
                   </div>
-                  <div class="col-span-6">
-                    <template v-for="carouselImage in hinatazaka.attributes.carousel">
-                      <div
-                          class="transition ease-out duration-300 rounded-lg hover:scale-120 hover:shadow-[32px_28px_0px_1px_rgba(219,0,219,1)] hover:-translate-x-6">
-                        <Swiper
-                            :modules="[SwiperAutoplay,EffectFade]"
-                            :effect="'fade'"
-                            :autoplay="{
-                        delay: 4000,
-                        disableOnInteraction: false,
-                        }" class=" ">
-                          <SwiperSlide class="rounded-lg  hover:brightness-75
-                        transition ease-in-out duration-300 " v-for="images in carouselImage" :key="images">
-                            <nuxt-img class="rounded-lg shadow-lg origin-center shadow-stale-600" alt=""
-                                      provider="strapi" :src="`${images.attributes.url}`"/>
-
-                          </SwiperSlide>
-                        </Swiper>
-                      </div>
-                    </template>
+                  <div class=" lg:block lg:col-span-6">
+                    <GroupHomepage :swipernogi="hinatazaka" />
                   </div>
                 </div>
                 <div class="w-full flex justify-center">
                   <div class="grid grid-cols-2 md:grid-cols-8 gap-6">
                     <div class="">
-                      <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single1">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox1 :boxSwiper="homepageHinatazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single2">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox2 :boxSwiper="homepageHinatazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single4">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox3 :boxSwiper="homepageHinatazaka" />
                     </div>
                     <div class="">
-                      <template v-for="nogizakasingle in homepageHinatazaka">
-                        <template v-for="nogizakasingle2 in nogizakasingle.attributes.single5">
-                          <div class="">
-                            <Swiper
-                                :modules="[SwiperAutoplay,EffectCube]"
-                                :effect="'cube'"
-                                :grabCursor="true"
-                                :cubeEffect="{
-                                shadow: true,
-                                slideShadows: true,
-                                shadowOffset: 20,
-                                shadowScale: 0.94,
-                              }"
-                                :autoplay="{
-                              delay: 4000,
-                              disableOnInteraction: false,
-                              }"
-                                class="transition ease-in-out duration-300 hover:z-50  ring-4 ring-offset-2 ring-purple-500 hover:ring-pink-500 rounded-lg hover:scale-150 hover:-translate-y-12 hover:translate-x-12">
-                              <SwiperSlide class="" v-for="imagesingle1 in nogizakasingle2" :key="imagesingle1">
-                                <nuxt-img class="rounded-lg shadow-lg hover:scale-120 shadow-stale-600" alt=""
-                                          provider="strapi" :src="`${imagesingle1.attributes.url}`"/>
-
-                              </SwiperSlide>
-                            </Swiper>
-                          </div>
-                        </template>
-                      </template>
+                      <SwiperBox4 :boxSwiper="homepageHinatazaka" />
                     </div>
                   </div>
                 </div>
               </div>
             </template>
+          </div>
+
+        </div>
+      </div>
+      <div>
+
+        <div class="p-4">
+          <GlobalTitle title="Why I see an ads?" />
+          <NuxtLink to="/term" class="underline ">Our Terms</NuxtLink>
+          <div class="p-4 rounded-md border-2">
+            <adsbygoogle />
           </div>
         </div>
       </div>
@@ -470,6 +119,11 @@
 
 <script setup>
 import {EffectCube, EffectFade} from "swiper";
+import GroupHomepage from "~/components/Homepage/SwiperHome.vue";
+import SwiperBox1 from "~/components/Homepage/SwiperBox1.vue";
+import SwiperBox2 from "~/components/Homepage/SwiperBox2.vue";
+import SwiperBox3 from "~/components/Homepage/SwiperBox3.vue";
+import SwiperBox4 from "~/components/Homepage/SwiperBox4.vue";
 
 const {find} = useStrapi()
 const {data: homepageNogizaka} = await find('introductions?populate=*&filters[group][$eq]=Nogizaka46')

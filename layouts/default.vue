@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="flex flex-col">
     <header class="w-full pt-6 pb-8 bg-zinc-800 text-white inter">
       <nav class="w-full">
         <div class="grid grid-col-2 lg:grid-cols-3 gap-2 justify-items-center ">
@@ -30,7 +30,18 @@
                 <div class="flex flex-row items-center">
                   <div class="flex flex-row md:space-x-5 p-2 rounded-md hover:bg-zinc-700 items-center">
                     <nuxt-icon class="hidden md:block" name="news" />
-                    <NuxtLink class="" href="/news">News</NuxtLink>
+                    <el-popover
+                        placement="bottom-end"
+                        title="On Progess"
+                        :width="200"
+                        trigger="hover"
+                        content="This feature in development"
+                    >
+                      <template #reference>
+                        <button class="">News</button>
+                      </template>
+                    </el-popover>
+
                   </div>
 
 
@@ -57,60 +68,44 @@
     <main class="">
       <slot />
     </main>
-
-    <footer class="w-full h-fit flex p-7 bg-zinc-800 text-white inter static bottom-0">
-      <div class="w-full">
-          <div class="flex justify-start lg:justify-center ">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="">
-                <div class="grid grid-col-2">
-                  <div class="flex flex-col">
-                    <NuxtLink class="font-bold text-lg" to="/">About Us</NuxtLink>
+    <footer >
+          <div class="w-full bg-zinc-800 text-white static ">
+            <div class="w-full flex flex-col justify-center p-4 ">
+              <div class="grid grid-cols-1 lg:grid-cols-2 p-4 gap-4 lg:gap-8 justify-items-center">
+                  <div>
+                    <p class="font-bold text-lg text-start" >About Us</p>
                     <NuxtLink to="/term">Term of Use</NuxtLink>
+                    <h2 class="text-lg font-bold ">Contact Us</h2>
+                    <p class="text-start">
+                      any question contact us</p>
+                    <a class="underline" href="mailto:sakamichi.online@gmail.com">sakamichi.online@gmail.com</a>
+                    <div class="space-x-6">
+                      <NuxtLink to="https://twitter.com/PrincePositif" >Instagram</NuxtLink>
+                      <NuxtLink to="https://instagram.com/tsusui.rei?igshid=MzNlNGNkZWQ4Mg==" class="">Twitter</NuxtLink>
+                    </div>
                   </div>
-                  <div class="grid grid-rows-2">
-                    <p class="text-lg font-bold text-start">Supported by</p>
-                    <div class="flex justify-start gap-4">
-                      <NuxtLink to="https://www.digitalocean.com/"  class="bg-white p-2 rounded-md text-black">
-                        <nuxt-img class="w-12" src="dg.png" />
-                      </NuxtLink>
-                      <NuxtLink to="https://www.digitalocean.com/"  class="bg-white p-2 rounded-md text-black">
-                        <nuxt-img class="w-12" src="vercel.png" />
-                      </NuxtLink>
+
+                <div>
+                  <div class="flex flex-col gap-2 col-span-12 md:col-span-1 justify-center">
+                    <p class="text-lg font-bold text-start">Official Website</p>
+                    <div class="grid grid-cols-3 gap-6 justify-items-center">
+                      <NuxtLink to="https://www.nogizaka46.com/"><nuxt-img src="nogizaka46.png" class="w-10 lg:w-20"  alt="nogizaka logo" /></NuxtLink>
+                      <NuxtLink to="https://sakurazaka46.com/"><nuxt-img src="sakurazaka46.png" class="w-10 lg:w-20" alt="sakura logo" /></NuxtLink>
+                      <NuxtLink to="https://www.hinatazaka46.com/s/official/?ima=0000"><nuxt-img src="hinatazaka46.png" class="w-10 lg:w-20" alt="hinata logo" /></NuxtLink>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="">
-                <div>
-                  <h2 class="text-lg font-bold ">Contact Us</h2>
-                  <p class="text-start">
-                   any question contact us
-                  </p>
-                  <NuxtLink class="underline" href="mailto:sakamichi.online@gmail.com">sakamichi.online@gmail.com</NuxtLink>
-                </div>
-                <div>
-                  <h2 class="text-lg font-bold">Social Media</h2>
-                  <NuxtLink to="https://twitter.com/PrincePositif" class="mr-4">Instagram</NuxtLink>
-                  <NuxtLink to="https://instagram.com/tsusui.rei?igshid=MzNlNGNkZWQ4Mg==" class="">Twitter</NuxtLink>
-                </div>
+
               </div>
               <div>
-                <div class="flex flex-col gap-2 col-span-12 md:col-span-1 justify-center">
-                  <p class="text-lg font-bold text-start">Official Website</p>
-                  <div class="grid grid-cols-3 gap-6 justify-items-center">
-                    <NuxtLink to="https://www.nogizaka46.com/"><nuxt-img src="nogizaka46.png" class="w-10 lg:w-20"  alt="nogizaka logo" /></NuxtLink>
-                    <NuxtLink to="https://sakurazaka46.com/"><nuxt-img src="sakurazaka46.png" class="w-10 lg:w-20" alt="sakura logo" /></NuxtLink>
-                    <NuxtLink to="https://www.hinatazaka46.com/s/official/?ima=0000"><nuxt-img src="hinatazaka46.png" class="w-10 lg:w-20" alt="hinata logo" /></NuxtLink>
-                  </div>
-                </div>
+                <p class="w-full border-t-2 p-2 mt-3">Copyright Sakamichi.online 2023 - All right reserved</p>
               </div>
             </div>
-          </div>
-        <p class="flex justify-center border-t-2 p-2 mt-3">Copyright Sakamichi.online 2023 - All right reserved</p>
-      </div>
 
+          </div>
     </footer>
+
+
 
   </div>
 </template>
@@ -122,6 +117,8 @@ export default {
   name: "default",
   components: {FooterLayout}
 }
+
+
 </script>
 
 <style scoped>
