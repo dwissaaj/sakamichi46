@@ -28,18 +28,29 @@
         </div>
       </div>
     </div>
-    <div class="hidden md:block p-4">
+    <div class=" p-4">
       <GlobalTitle title="Advertising" />
       <div class="p-4 rounded-lg border-2 border-white">
         <div class=" p-3 gap-3">
-          <adsbygoogle  ad-style="hidden"
+          <adsbygoogle  :ad-style="{display:'block', }"
                         ad-format="autorelaxed"
                         ad-client="ca-pub-6939749049118846"
                         ad-slot="2870384264" />
         </div>
       </div>
     </div>
-
+    <div class=" p-4">
+      <GlobalTitle title="Advertising" />
+      <div class="p-4 rounded-lg border-2 border-white">
+        <adsbygoogle
+            :ad-style="{display:'block', }"
+            ad-client="ca-pub-6939749049118846"
+            ad-slot="2035335818"
+            ad-format="auto"
+            full-width-responsive="full-width-responsive"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

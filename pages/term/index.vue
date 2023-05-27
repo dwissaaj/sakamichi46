@@ -32,45 +32,30 @@
       </div>
     </div>
     <div class="p-2 lg:p-8">
-      <GlobalTitle title="Help Us by click this ads" />
-      <div class="grid grid-cols-1 lg:grid-cols-6  border-2 p-3 rounded-lg ">
-        <template v-for="x in 6">
-          <div>
-            <adsbygoogle   />
-          </div>
-        </template>
-<!--        <div>-->
-<!--          <adsbygoogle   />-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <adsbygoogle   />-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <adsbygoogle   />-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <adsbygoogle   />-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <adsbygoogle   />-->
-<!--        </div>-->
+      <GlobalTitle title="Help Us by click this ads"/>
+
+      <div class="border-2 p-3 rounded-lg">
+        <adsbygoogle
+            :ad-style="{display:'block', }"
+            ad-format="autorelaxed"
+            ad-client="ca-pub-6939749049118846"
+            ad-slot="8831844302"/>
       </div>
+
     </div>
     <div class="p-2 lg:p-8">
-      <GlobalTitle title="Help Us by click this ads" />
-
-        <div>
-          <adsbygoogle />
-        </div>
-
-
-
-<!--        <adsbygoogle-->
-<!--                     ad-format="autorelaxed"-->
-<!--                    :ad-style="{display: 'inline-block', width:'800px', height: '300px'}"-->
-<!--                     ad-client="ca-pub-6939749049118846" />-->
-
+      <GlobalTitle title="Second Ads" />
+      <div class="grid grid-cols-1 lg:grid-cols-6  border-2 p-3 rounded-lg ">
+          <div>
+            <adsbygoogle ad-client="ca-pub-6939749049118846"
+                         :ad-style="{display:'block', }"
+                         ad-slot="4403791935"
+                         ad-format="auto"
+                         full-width-responsive="full-width-responsive"   />
+          </div>
+      </div>
     </div>
+
     <div>
     </div>
   </div>

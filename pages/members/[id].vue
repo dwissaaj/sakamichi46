@@ -72,11 +72,10 @@
               <GlobalTitle title="Advertising"/>
               <div class="border rounded-md border-zinc-300 bg-zinc-800 h-82">
                 <adsbygoogle :ad-style="{display:'block', }"
-                             data-ad-layout="in-article"
-                             data-ad-format="fluid"
-                             data-ad-client="ca-pub-6939749049118846"
-                             data-ad-slot="4275799422"
-                ad-full-width-responsive="ad-full-width-responsive"/>
+                             ad-client="ca-pub-6939749049118846"
+                             ad-slot="9464546928"
+                             ad-format="auto"
+                             full-width-responsive="full-width-responsive"/>
               </div>
             </div>
           </div>
