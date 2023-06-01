@@ -3,7 +3,7 @@
 // @ts-ignore
 export default defineNuxtConfig({
     modules: [
-        "@nuxtjs/google-fonts","@nuxtjs/tailwindcss","@nuxt/image-edge","nuxt-icons","nuxt-icon","@nuxtjs/strapi"
+        '@nuxtjs/google-fonts','@nuxtjs/tailwindcss','@nuxt/image-edge','nuxt-icons','nuxt-icon','@nuxtjs/strapi'
         ,'@element-plus/nuxt','nuxt-swiper','@nuxtjs/google-adsense','nuxt-gtag'
     ],
     strapi: {
@@ -14,7 +14,16 @@ export default defineNuxtConfig({
     image : {
         dir: 'assets/images',
         strapi: {
-            baseURL: 'http://localhost:1337/'
+            baseURL: 'https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/'
+        },
+        providers: {
+            customProvider: {
+                name: 'bucket',
+                provider: '../customProvider',
+                options :{
+                    baseURL: 'https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/'
+                }
+            }
         }
     },
     tailwindcss: {
@@ -22,15 +31,15 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-           'Poppins' : true,
-           'Nunito' : [300,500],
-           'Ubuntu' : [300,500],
-            'Bree Serif' : true,
-            'Raleway' : [300,500],
-            'Monospace': [400,700],
-             'Inconsolata': [400,700],
-            'Lato' : [400.700],
-            'Inter' : [100,300]
+           Poppins : true,
+           Nunito : [300,500],
+           Ubuntu : [300,500],
+            'Bree+Serif' : true,
+            Raleway : [300,500],
+            Monospace: [400,700],
+             Inconsolata: [400,700],
+            Lato : [400.700],
+            Inter : [100,300]
         }
     },
     "google-adsense" : {

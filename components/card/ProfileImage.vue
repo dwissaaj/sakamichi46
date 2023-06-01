@@ -3,7 +3,7 @@
     <div class="" v-for="swiper in memberPhoto.attributes.profileImage" :key="swiper.id">
       <div v-for="swipers in swiper.image">
         <div class="grid grid-cols-1 lg:gap-0" v-for="swiperss in swipers" :key="swiperss.id">
-          <nuxt-img provider="strapi" :src="`${swiperss.attributes.url}`" />
+          <nuxt-img provider="bucket" :src="`${swiperss.attributes.url}`" />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
             <SwiperSlide class="rounded-lg  hover:brightness-75
                         transition ease-in-out duration-300 " v-for="images in carouselImage" :key="images">
               <nuxt-img class="rounded-lg shadow-lg origin-center shadow-stale-600" alt=""
-                        provider="strapi" :src="`${images.attributes.url}`"/>
+                        provider="bucket" :src="`${images.attributes.url}`"/>
 
             </SwiperSlide>
           </Swiper>

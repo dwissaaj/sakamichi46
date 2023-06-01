@@ -115,16 +115,16 @@
       </div>
     </div>
   </div>
+  <p>kldfdfklsj</p>
 </template>
 
 <script setup>
-import {EffectCube, EffectFade} from "swiper";
 import GroupHomepage from "~/components/Homepage/SwiperHome.vue";
 import SwiperBox1 from "~/components/Homepage/SwiperBox1.vue";
 import SwiperBox2 from "~/components/Homepage/SwiperBox2.vue";
 import SwiperBox3 from "~/components/Homepage/SwiperBox3.vue";
 import SwiperBox4 from "~/components/Homepage/SwiperBox4.vue";
-
+//
 const {find} = useStrapi()
 const {data: homepageNogizaka} = await find('introductions?populate=*&filters[group][$eq]=Nogizaka46')
 const {data: homepageSakurazaka} = await find('introductions?populate=*&filters[group][$eq]=Sakurazaka46')
