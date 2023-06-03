@@ -4,7 +4,7 @@
       <nav class="w-full">
         <div class="grid grid-col-2 lg:grid-cols-3 gap-2 justify-items-center ">
           <div>
-            <NuxtLink href="/"><nuxt-img class="w-12" src="sakamichi.png"  /></NuxtLink>
+            <NuxtLink href="/"><nuxt-img class="w-12" provider="bucket" src="layout/sakamichi.png"  /></NuxtLink>
           </div>
           <div class="grid grid-cols-5 gap-2 lg:gap-14 content-center ">
               <div class="flex flex-row items-center">
@@ -89,9 +89,9 @@
                   <div class="flex flex-col gap-2 col-span-12 md:col-span-1 justify-center">
                     <p class="text-lg font-bold text-start">Official Website</p>
                     <div class="grid grid-cols-3 gap-6 justify-items-center">
-                      <NuxtLink to="https://www.nogizaka46.com/"><nuxt-img src="nogizaka46.png" class="w-10 lg:w-20"  alt="nogizaka logo" /></NuxtLink>
-                      <NuxtLink to="https://sakurazaka46.com/"><nuxt-img src="sakurazaka46.png" class="w-10 lg:w-20" alt="sakura logo" /></NuxtLink>
-                      <NuxtLink to="https://www.hinatazaka46.com/s/official/?ima=0000"><nuxt-img src="hinatazaka46.png" class="w-10 lg:w-20" alt="hinata logo" /></NuxtLink>
+                      <NuxtLink to="https://www.nogizaka46.com/"><nuxt-img provider="bucket" src="/layout/nogi.png" class="w-10 lg:w-20"  alt="nogizaka logo" /></NuxtLink>
+                      <NuxtLink to="https://sakurazaka46.com/"><nuxt-img provider="bucket" src="/layout/hinatazaka46.png" class="w-10 lg:w-20" alt="sakura logo" /></NuxtLink>
+                      <NuxtLink to="https://www.hinatazaka46.com/s/official/?ima=0000"><nuxt-img provider="bucket" src="/layout/sakurazaka46.png" class="w-10 lg:w-20" alt="hinata logo" /></NuxtLink>
                     </div>
                   </div>
                 </div>
