@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,18 +28,14 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: pm2 restart SakamichiFE
-  deploy:
-      environment:
-        name: AWS Lightsail
-        url: http://sakamichi.online/
-      runs-on: ubuntu-latest
-      needs: build
-      steps:
-        - name: Deploy to AWS
-          id: deployment
-          uses: actions/deploy-pages@v2
-        - run: npm run build
-        - run: npm run start
-        - run: pm2 restart SakamichiFE
-        
+    - run: npm run start
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Create Release
+      id: v1
+      uses: actions/create-release@v1
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+         tag_name: ${{ github.ref }}
+         release_name: Release ${{ github.ref }}
