@@ -1,4 +1,5 @@
 <template>
+  <ClientOnly>
   <template v-for="nogizakasingle in boxSwiper">
     <template v-for="nogizakasingle2 in nogizakasingle.attributes.single4">
       <div class="">
@@ -26,6 +27,7 @@
       </div>
     </template>
   </template>
+  </ClientOnly>
 </template>
 
 <script setup>

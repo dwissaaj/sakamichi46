@@ -1,5 +1,5 @@
 <template>
-
+    <ClientOnly >
     <div class="">
       <template v-for="carouselImage in swipernogi.attributes.carousel">
         <div
@@ -21,7 +21,7 @@
         </div>
       </template>
     </div>
-
+    </ClientOnly>
 </template>
 
 <script setup>
