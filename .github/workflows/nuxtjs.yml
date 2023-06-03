@@ -79,19 +79,15 @@ jobs:
     steps:
       - name: Deploy to AWS Lightsail
         id: deployment
-        uses: actions/deploy-pages@v1 
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Version for sakamichi.online
-          draft: false
-          prerelease: false
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            git fetch main
+            git reset --hard origin/production
+            npm install --only=production
+            npm run build
+            pm2 kill
+            pm2 start "npm run start" --name SakamichiFE
+ 
