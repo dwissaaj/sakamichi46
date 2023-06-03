@@ -9,7 +9,7 @@
               <div class="w-full flex flex-col space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
                   <div class="col-span-3 flex justify-center">
-                    <p class="text-justify">{{ nogizaka.attributes.description }}</p>
+                    <p class="text-justify">{{ nogizaka.attributes.introduction }}</p>
                   </div>
                   <div class=" lg:block lg:col-span-6">
                     <GroupHomepage :swipernogi="nogizaka" />
@@ -42,7 +42,7 @@
               <div class="w-full flex flex-col space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
                   <div class="col-span-3 flex justify-center">
-                    <p class="text-justify">{{ sakurazaka.attributes.description }}</p>
+                    <p class="text-justify">{{ sakurazaka.attributes.introduction }}</p>
                   </div>
                   <div class=" lg:block lg:col-span-6">
                     <GroupHomepage :swipernogi="sakurazaka" />
@@ -75,7 +75,7 @@
               <div class="w-full flex flex-col space-y-12">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
                   <div class="col-span-3 flex justify-center">
-                    <p class="text-justify">{{ hinatazaka.attributes.description }}</p>
+                    <p class="text-justify">{{ hinatazaka.attributes.introduction }}</p>
                   </div>
                   <div class=" lg:block lg:col-span-6">
                     <GroupHomepage :swipernogi="hinatazaka" />
@@ -129,6 +129,7 @@ const {find} = useStrapi()
 const {data: homepageNogizaka} = await find('introductions?populate=*&filters[group][$eq]=Nogizaka46')
 const {data: homepageSakurazaka} = await find('introductions?populate=*&filters[group][$eq]=Sakurazaka46')
 const {data: homepageHinatazaka} = await find('introductions?populate=*&filters[group][$eq]=Hinatazaka46')
+
 useSeoMeta({
   title: 'Sakamichi Fan Site',
   ogTitle: 'Talk about Sakamichi',
