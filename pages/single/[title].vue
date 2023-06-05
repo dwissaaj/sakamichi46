@@ -11,7 +11,7 @@
          <section class="flex p-4 lg:p-8 justify-start ">
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
              <div class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
-               <nuxt-img class="w-[600px] shadow-xl shadow-slate-900 border border-white rounded-lg hover:border-2 hover:border-emerald-500" provider="bucket" :src="`${mainCover.attributes.url}`" />
+               <nuxt-img class="w-[600px] shadow-xl shadow-slate-900 border border-white rounded-lg hover:border-2 hover:border-emerald-500" provider="strapi" :src="`${mainCover.attributes.url}`" />
              </div>
              <div class="grid grid-rows-2 gap-0">
                <div class="grid gap-2">
@@ -45,7 +45,7 @@
                   disableOnInteraction: true,
                   }" class=" transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
                    <SwiperSlide class=""  v-for="collection in collec" :key="collection" >
-                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="bucket" :src="`${collection.attributes.url}`"  />
+                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${collection.attributes.url}`"  />
                    </SwiperSlide>
                  </Swiper>
                </div>
@@ -68,7 +68,7 @@
                   disableOnInteraction: true,
                   }" class=" transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] shadow-md shadow-gray-100">
                    <SwiperSlide class=""  v-for="backcovers in back" :key="backcovers" >
-                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="bucket" :src="`${backcovers.attributes.url}`"  />
+                     <nuxt-img class="border-white border-2 rounded-lg hover:border-emerald-500" alt="" provider="strapi" :src="`${backcovers.attributes.url}`"  />
                    </SwiperSlide>
                  </Swiper>
                </div>
@@ -108,9 +108,10 @@
              <div class="p-4 border-slate-400 border rounded-md w-full">
                <div class=" max-h-96 ">
                    <adsbygoogle :ad-style="{'display' :'block'}"
-                                ad-format="autorelaxed"
+                                ad-format="auto"
                                 ad-client="ca-pub-6939749049118846"
-                                ad-slot="9147539076"
+                                ad-slot="6034176601"
+                               ad-full-width-responsive="ad-full-width-responsive"
                    />
                </div>
              </div>

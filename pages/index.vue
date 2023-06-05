@@ -109,7 +109,13 @@
           <GlobalTitle title="Why I see an ads?" />
           <NuxtLink to="/term" class="underline ">Our Terms</NuxtLink>
           <div class="p-4 rounded-md border-2">
-            <adsbygoogle />
+            <adsbygoogle ad-slot="1991808051 "  />
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6939749049118846"
+                 data-ad-slot="1991808051"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
           </div>
         </div>
       </div>

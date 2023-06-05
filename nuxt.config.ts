@@ -4,10 +4,10 @@
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/google-fonts','@nuxtjs/tailwindcss','@nuxt/image-edge','nuxt-icons','nuxt-icon','@nuxtjs/strapi'
-        ,'@element-plus/nuxt','nuxt-swiper','@nuxtjs/google-adsense','nuxt-gtag'
+        ,'@element-plus/nuxt','nuxt-swiper','nuxt-gtag','@nuxtjs/google-adsense'
     ],
     strapi: {
-        url: process.env.STRAPI_URL ,
+        url:  process.env.STRAPI_URL || 'http://localhost:1337' ,
         prefix: '/api',
         version: 'v4',
     },
@@ -25,6 +25,9 @@ export default defineNuxtConfig({
                     AWS_BUCKET: process.env.AWS_BUCKET
                 }
             }
+        },
+        strapi: {
+            baseURL: 'http://localhost:1337/uploads/'
         }
     },
     tailwindcss: {
@@ -41,14 +44,15 @@ export default defineNuxtConfig({
             Inter : [100,300]
         }
     },
-    "google-adsense" : {
-        id: 'ca-pub-6939749049118846',
-
-    },
     gtag: {
         id: 'G-HRXCTT3KDM'
     },
-
+    'google-adsense': {
+        id : 'ca-pub-6939749049118846',
+        onPageLoad: false,
+        pageLevelAds: false,
+        test: false
+    },
 
 
 })

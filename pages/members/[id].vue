@@ -49,7 +49,7 @@
                   <div v-for="gifgallery in gifImage.image.data">
                     <nuxt-img
                         class="transition ease-in-out duration-300 hover:scale-[2.0] flex gap-3 ring-1 ring-black rounded-md cursor-zoom-in"
-                        :src="`${gifgallery.attributes.url}`" provider="bucket" format="gif"  />
+                        :src="`${gifgallery.attributes.url}`" provider="strapi" format="gif"  />
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@
               <div class="border rounded-md border-zinc-300 bg-zinc-800 h-82">
                 <adsbygoogle :ad-style="{display:'block', }"
                              ad-client="ca-pub-6939749049118846"
-                             ad-slot="9464546928"
+                             ad-slot="5567256839"
                              ad-format="auto"
                              full-width-responsive="full-width-responsive"/>
               </div>
@@ -91,7 +91,7 @@
                   disableOnInteraction: false,
                   }" class="transition ease-out duration-300 hover:rotate-12  ">
                   <SwiperSlide class=""  v-for="data2 in data1" :key="data2" >
-                    <nuxt-img class="h-full w-full border-black border-2 rounded-lg hover:border-purple-500 shadow-xl " alt="" provider="bucket" :src="`${data2.attributes.url}`"  />
+                    <nuxt-img class="h-full w-full border-black border-2 rounded-lg hover:border-purple-500 shadow-xl " alt="" provider="strapi" :src="`${data2.attributes.url}`"  />
                     <p class="mt-2 text-white text-center capitalize ">{{data2.attributes.name}}</p>
                   </SwiperSlide>
                 </Swiper>

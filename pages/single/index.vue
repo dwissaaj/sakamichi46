@@ -26,7 +26,7 @@
             <div class="" v-for="mainCover in post.attributes.cover" :key="mainCover">
               <NuxtLink class="" :to="`/single/${post.attributes.title}`">
                 <div class="flex flex-col space-y-1 ">
-                  <nuxt-img class="h-[150px] rounded-lg object-cover hover:brightness-50" provider="bucket" :src="`${mainCover.attributes.url}`" />
+                  <nuxt-img class="h-[150px] rounded-lg object-cover hover:brightness-50" provider="strapi" :src="`${mainCover.attributes.url}`" />
                   <p  class="font-medium">{{post.attributes.title}}</p>
                   <p>{{post.attributes.kanji}}</p>
                   <p class="text-slate-600 font-medium">{{post.attributes.group}} | {{post.attributes.launch.substr(0,4)}}</p>

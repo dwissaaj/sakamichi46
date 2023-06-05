@@ -39,7 +39,7 @@
             :ad-style="{display:'block', }"
             ad-format="autorelaxed"
             ad-client="ca-pub-6939749049118846"
-            ad-slot="8831844302"/>
+            ad-slot="5232230827"/>
       </div>
 
     </div>
@@ -49,8 +49,8 @@
           <div>
             <adsbygoogle ad-client="ca-pub-6939749049118846"
                          :ad-style="{display:'block', }"
-                         ad-slot="4403791935"
-                         ad-format="auto"
+                         ad-slot="3599584952"
+                         ad-format="autorelaxed"
                          full-width-responsive="full-width-responsive"   />
           </div>
       </div>
