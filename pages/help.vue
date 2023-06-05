@@ -21,7 +21,7 @@
         <div class="flex flex-row space-x-6">
           <div class="w-20 md:w-40">
             <NuxtLink to="https://www.buymeacoffee.com/sakamichionline" class="" >
-              <nuxt-img src="bmc-button.png" />
+              <nuxt-img src="https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/layout/bmc-button.png" />
             </NuxtLink>
 
           </div>
@@ -35,7 +35,7 @@
           <adsbygoogle  :ad-style="{display:'block', }"
                         ad-format="autorelaxed"
                         ad-client="ca-pub-6939749049118846"
-                        ad-slot="2870384264" />
+                        ad-slot="2478893217" />
         </div>
       </div>
     </div>
@@ -45,9 +45,9 @@
         <adsbygoogle
             :ad-style="{display:'block', }"
             ad-client="ca-pub-6939749049118846"
-            ad-slot="2035335818"
-            ad-format="auto"
-            full-width-responsive="full-width-responsive"
+            ad-slot="7348076510"
+            ad-format="autorelaxed"
+
         />
       </div>
     </div>

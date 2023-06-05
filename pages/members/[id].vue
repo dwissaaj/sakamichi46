@@ -73,7 +73,7 @@
               <div class="border rounded-md border-zinc-300 bg-zinc-800 h-82">
                 <adsbygoogle :ad-style="{display:'block', }"
                              ad-client="ca-pub-6939749049118846"
-                             ad-slot="9464546928"
+                             ad-slot="5567256839"
                              ad-format="auto"
                              full-width-responsive="full-width-responsive"/>
               </div>

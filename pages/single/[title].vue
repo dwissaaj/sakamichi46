@@ -108,9 +108,9 @@
              <div class="p-4 border-slate-400 border rounded-md w-full">
                <div class=" max-h-96 ">
                    <adsbygoogle :ad-style="{'display' :'block'}"
-                                ad-format="autorelaxed"
+                                ad-format="auto"
                                 ad-client="ca-pub-6939749049118846"
-                                ad-slot="9147539076"
+                                ad-slot="6034176601"
                    />
                </div>
              </div>
