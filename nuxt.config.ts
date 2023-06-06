@@ -25,6 +25,9 @@ export default defineNuxtConfig({
                     AWS_BUCKET: process.env.AWS_BUCKET
                 }
             }
+        },
+        strapi: {
+            baseURL: 'http://localhost:1337/uploads/'
         }
     },
     tailwindcss: {

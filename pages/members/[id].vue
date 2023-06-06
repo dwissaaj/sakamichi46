@@ -44,15 +44,15 @@
             <div class="w-full  flex flex-col mt-4 lg:mt-8">
               <GlobalTitle title="Gif"/>
               <div class="border rounded-md border-zinc-300 bg-zinc-800 p-3 grid grid-cols-1 md:grid-cols-6 md:gap-4 interFont">
-              <div v-for="gifs in gif">
-                <div v-for="gifImage in gifs.attributes.gif">
+              <template v-for="gifs in gif">
+                <template v-for="gifImage in gifs.attributes.gif">
                   <div v-for="gifgallery in gifImage.image.data">
                     <nuxt-img
                         class="transition ease-in-out duration-300 hover:scale-[2.0] flex gap-3 ring-1 ring-black rounded-md cursor-zoom-in"
                         :src="`${gifgallery.attributes.url}`" provider="bucket" format="gif"  />
                   </div>
-                </div>
-              </div>
+                </template>
+              </template>
               </div>
             </div>
 
@@ -74,7 +74,7 @@
                 <adsbygoogle :ad-style="{display:'block', }"
                              ad-client="ca-pub-6939749049118846"
                              ad-slot="5567256839"
-                             ad-format="auto"
+                             ad-formatx="auto"
                              full-width-responsive="full-width-responsive"/>
               </div>
             </div>
@@ -92,7 +92,7 @@
                   }" class="transition ease-out duration-300 hover:rotate-12  ">
                   <SwiperSlide class=""  v-for="data2 in data1" :key="data2" >
                     <nuxt-img class="h-full w-full border-black border-2 rounded-lg hover:border-purple-500 shadow-xl " alt="" provider="bucket" :src="`${data2.attributes.url}`"  />
-                    <p class="mt-2 text-white text-center capitalize ">{{data2.attributes.name}}</p>
+                    <p class="mt-2 text-white font-bold text-center capitalize ">{{data2.attributes.name.substr(0,data2.attributes.name.length-4)}}</p>
                   </SwiperSlide>
                 </Swiper>
               </div>

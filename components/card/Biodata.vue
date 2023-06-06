@@ -21,10 +21,10 @@
       <Icon name="material-symbols:bloodtype-outline-rounded" />
       <p class="" >{{biodata.attributes.bloodtype}} type</p>
     </div>
-    <div :style="{ backgroundColor: `${biodata.attributes.penlight2}`, padding: '10px', borderRadius: '10px', borderColor: 'white', borderWidth: '3px' }" >
+    <div :style="{ backgroundColor: `${biodata.attributes.penlightCssColor2}`, padding: '10px', borderRadius: '10px', borderColor: 'white', borderWidth: '3px' }" >
       <p class="capitalize font-semibold" >{{biodata.attributes.penColor2}}</p>
     </div>
-    <div :style="{ backgroundColor: `${biodata.attributes.penlight1}`, padding: '10px', borderRadius: '10px', borderColor: 'white', borderWidth: '3px' }" >
+    <div :style="{ backgroundColor: `${biodata.attributes.penlightCssColor1}`, padding: '10px', borderRadius: '10px', borderColor: 'white', borderWidth: '3px' }" >
       <p class="capitalize font-semibold" >{{biodata.attributes.penColor1}}</p>
     </div>
 
