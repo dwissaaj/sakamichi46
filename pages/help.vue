@@ -19,11 +19,10 @@
 
         </p>
         <div class="flex flex-row space-x-6">
-          <div class="w-20 md:w-40">
+          <div class="">
             <NuxtLink to="https://www.buymeacoffee.com/sakamichionline" class="" >
-              <nuxt-img src="https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/layout/bmc-button.png" />
+              <nuxt-img src="https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/layout/bmc-button.png" class="w-20 lg:w-40" alt="buy me coffee"/>
             </NuxtLink>
-
           </div>
         </div>
       </div>
