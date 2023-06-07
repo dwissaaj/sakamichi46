@@ -1,5 +1,5 @@
 <template>
-   <ClientOnly>
+  <NuxtLoadingIndicator />
      <div v-for="single in singleData" class="w-full h-full bg-black text-white interFont">
        <Head>
          <Title>{{single.attributes.group}} {{single.attributes.title}} </Title>
@@ -7,7 +7,9 @@
          <Meta name="description" :content="`${single.attributes.description}`" />
          <Meta name="keywords" :content="`${single.attributes.tagsSeo}`" />
        </Head>
+
        <div class="grid grid-cols-1">
+         <NuxtLoadingIndicator />
          <section class="flex p-4 lg:p-8 justify-start ">
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
              <div class="transition ease-in-out duration-300 hover:scale-150 hover:translate-x-[300px] hover:z-50" v-for="mainCover in single.attributes.cover">
@@ -118,7 +120,7 @@
          </section>
        </div>
      </div>
-   </ClientOnly>
+
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+
   <div class="w-full member-bg interFont" v-for="member in response" key="member.id">
     <Head>
       <Title>{{member.attributes.group}} {{member.attributes.name}}</Title>
@@ -6,6 +7,7 @@
       <Meta name="description" :content="member.attributes.description" />
       <Meta name="keywords" :content="`${member.attributes.tagseo}`" />
     </Head>
+    <NuxtLoadingIndicator />
     <div class="px-4 lg:px-16 ">
       <div class="w-full flex flex-col">
         <div class="w-full grid grid-cols-12 gap-2 lg:gap-10 mt-5">

@@ -5,7 +5,9 @@
     <Meta name="description" content="All sakamichi series group singles released" />
     <Meta name="keywords" content="Sakamichi Singles, Sakamichi group, Nogizaka46, Sakurazaka46, Hinatazaka46" />
   </Head>
+  <NuxtLoadingIndicator />
   <div class="w-full bg-zinc-950 flex flex-col interFont ">
+    <NuxtLoadingIndicator />
     <div class="">
       <div class="flex flex-col justify-center ">
         <div class="flex justify-center mb-4">

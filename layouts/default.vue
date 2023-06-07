@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col">
+    <NuxtLoadingIndicator />
     <header class="w-full pt-6 pb-8 bg-zinc-800 text-white inter">
       <nav class="w-full">
         <div class="grid grid-col-2 lg:grid-cols-3 gap-2 justify-items-center ">
