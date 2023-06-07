@@ -1,5 +1,4 @@
 <template>
-
   <Head>
     <Title>Help & Donation</Title>
     <Meta charset="UTF-8"></Meta>
@@ -8,6 +7,7 @@
   </Head>
 
   <div class="w-full h-screen bg-black  text-white interFont ">
+    <NuxtLoadingIndicator />
     <div class="flex flex-col p-6 justify-start">
       <div>
         <GlobalTitle title="Advertising" />

@@ -1,5 +1,7 @@
 <template>
+  <NuxtLoadingIndicator />
   <div class="w-full member-bg">
+    <NuxtLoadingIndicator />
     <div class="p-12">
       <div class="">
         <Greet :target="'Nogizaka46'" :link="'/'" />
