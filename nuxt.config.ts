@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         ,'@element-plus/nuxt','nuxt-swiper','nuxt-gtag','@nuxtjs/google-adsense'
     ],
     strapi: {
-        url: 'http://localhost:1337',
+        url: process.env.STRAPI_URL ,
         prefix: '/api',
         version: 'v4',
     },
@@ -29,9 +29,7 @@ export default defineNuxtConfig({
                 }
             }
         },
-        strapi: {
-            baseURL: 'http://localhost:1337/uploads/'
-        }
+
     },
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
