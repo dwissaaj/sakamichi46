@@ -1,10 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // @ts-ignore
 // @ts-ignore
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
+// @ts-ignore
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/google-fonts','@nuxtjs/tailwindcss','@nuxt/image-edge','nuxt-icons','nuxt-icon','@nuxtjs/strapi'
-        ,'@element-plus/nuxt','nuxt-swiper','@nuxtjs/google-adsense','nuxt-gtag'
+        ,'@element-plus/nuxt','nuxt-swiper','nuxt-gtag','@nuxtjs/google-adsense'
     ],
     strapi: {
         url: process.env.STRAPI_URL ,
@@ -35,12 +39,6 @@ export default defineNuxtConfig({
     },
     googleFonts: {
         families: {
-           Poppins : true,
-           Nunito : [300],
-           Ubuntu : [300,500],
-            'Bree+Serif' : true,
-            Raleway : [300,500],
-            Lato : [400,700],
             Inter : [100,300]
         }
     },

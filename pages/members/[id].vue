@@ -2,7 +2,7 @@
 
   <div class="w-full member-bg interFont" v-for="member in response" key="member.id">
     <Head>
-      <Title>{{member.attributes.group}} {{member.attributes.name}}</Title>
+      <Title>{{member.attributes.name}} {{member.attributes.group}} </Title>
       <Meta charset="UTF-8"></Meta>
       <Meta name="description" :content="member.attributes.description" />
       <Meta name="keywords" :content="`${member.attributes.tagseo}`" />
@@ -71,7 +71,6 @@
 
             </div>
             <div class="w-full flex flex-col mt-4 lg:mt-8 mb-4 max-h-52 max-h-82">
-              <GlobalTitle title="Advertising"/>
               <div class="border rounded-md border-zinc-300 bg-zinc-800 h-82">
                 <adsbygoogle :ad-style="{display:'block', }"
                              ad-client="ca-pub-6939749049118846"

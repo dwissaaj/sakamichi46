@@ -106,7 +106,6 @@
          </section>
          <section class="flex p-4 lg:p-8 justify-center" >
            <div class="w-full flex flex-col">
-             <GlobalTitle title="Advertising"/>
              <div class="p-4 border-slate-400 border rounded-md w-full">
                <div class=" max-h-96 ">
                    <adsbygoogle :ad-style="{'display' :'block'}"
