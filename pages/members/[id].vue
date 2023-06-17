@@ -122,7 +122,7 @@ const {find} = useStrapi()
 const { id } = useRoute().params
 const {data: response} = await find(`members?filters[id][$eq]=${id}&populate[0]=oldProfile&populate[1]=sosmed&populate[2]=otherNames&populate[3]=mainProfile&populate[4]=singles.cover`)
 const {data: trivia} = await find(`trivias?populate[0]=member&populate[1]=trivia&filters[member][id][$eq]=${id}`)
-const {data: gallery} = await find(`galleries?populate[0]=collection.image&populate[1]=member&filters[member][id][$eq]=${id}`)
+const {data: gallery} = await find(`posts?populate[0]=collection.image&populate[1]=member&filters[member][id][$eq]=${id}`)
 const {data: otherMember} = await find(`members?populate=*&pagination[limit]=6&randomSort=true&filters[id][$notIn]=${id}`)
 const {data: gif} = await find(`gif-galleries?populate[0]=gif.image&populate[1]=member&filters[member][id][$eq]=${id}`)
 if(!response) {

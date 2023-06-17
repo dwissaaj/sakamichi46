@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         ,'@element-plus/nuxt','nuxt-swiper','nuxt-gtag','@nuxtjs/google-adsense'
     ],
     strapi: {
-        url: process.env.STRAPI_URL ,
+        url: 'http://localhost:1337',
         prefix: '/api',
         version: 'v4',
     },
@@ -22,7 +22,6 @@ export default defineNuxtConfig({
                 name: 'bucket',
                 provider: '../customProvider',
                 options :{
-                    // baseURL: 'https://bucket-q0ddp1.s3.ap-southeast-1.amazonaws.com/',
                     AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
                     AWS_ACCESS_SECRET: process.env.AWS_ACCESS_SECRET,
                     AWS_REGION: process.env.AWS_REGION,
@@ -30,7 +29,9 @@ export default defineNuxtConfig({
                 }
             }
         },
-    
+        strapi: {
+            baseURL: 'http://localhost:1337/uploads/'
+        }
     },
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
