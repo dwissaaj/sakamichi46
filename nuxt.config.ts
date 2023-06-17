@@ -30,9 +30,7 @@ export default defineNuxtConfig({
                 }
             }
         },
-        strapi: {
-            baseURL: 'http://localhost:1337/uploads/'
-        }
+    
     },
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
