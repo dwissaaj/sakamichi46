@@ -1,5 +1,13 @@
 <template>
+  <Head>
+    <Title>Sakamichi Fan Site</Title>
+    <Meta charset="UTF-8"></Meta>
+    <Meta name="description" content="This is a fan site where talk all about sakamichi members single and information" />
+    <Meta name="keywords" content="Sakamichi Singles, Sakamichi group, Nogizaka46, Sakurazaka46, Hinatazaka46" />
+    <meta name="a.validate.02" content="KtMOvgIfiecDc8YH1Cs1_auwIUqYm4n97boO" />
+  </Head>
   <div>
+
     <div class="w-full bg-zinc-950 flex flex-col interFont text-white">
       <div class="flex w-full justify-start items-center p-10">
         <div class="grid grid-rows-1 lg:grid-rows-3">
@@ -132,11 +140,8 @@ const {data: homepageNogizaka} = await find('introductions?populate=*&filters[gr
 const {data: homepageSakurazaka} = await find('introductions?populate=*&filters[group][$eq]=Sakurazaka46')
 const {data: homepageHinatazaka} = await find('introductions?populate=*&filters[group][$eq]=Hinatazaka46')
 
-useSeoMeta({
-  title: 'Sakamichi Fan Site',
-  ogTitle: 'Talk about Sakamichi',
-  description: 'This is a fan site where talk all about sakamichi members single and information',
-})
+
+
 
 </script>
 
